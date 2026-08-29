@@ -206,6 +206,7 @@ body.solid-head .hero h1 .grad{background:none;-webkit-text-fill-color:currentCo
 .contact-intro .big{font-size:34px;font-weight:600;letter-spacing:-0.02em;}
 .contact-intro .big{margin-bottom:18px;}
 .contact-intro .contact-sub{color:var(--ink);font-size:18px;max-width:440px;margin-bottom:32px;}
+.contact-intro .cta-row{display:flex;gap:14px;flex-wrap:wrap;}
 .contact-panel .cstar{position:absolute;right:46px;top:46px;color:var(--accent);font-size:40px;}
 .formnote{display:none;margin-top:14px;font-size:15px;color:var(--accent-2);font-weight:500;}
 
@@ -220,6 +221,7 @@ footer{margin-top:30px;}
 .foot-mid{display:block;margin:44px 0 36px;}
 .foot-contact h4{color:var(--accent);font-size:18px;margin-bottom:18px;background:var(--accent);color:var(--ink);display:inline-block;border-radius:6px;padding:2px 8px;}
 .foot-contact p{font-size:16px;margin-bottom:8px;color:#e7e6ee;}
+.foot-contact p a:hover{color:var(--accent);}
 .subscribe{background:#23242f;border-radius:var(--radius-sm);padding:30px;display:flex;flex-direction:column;gap:16px;}
 .subscribe .ln{display:flex;gap:14px;}
 .subscribe input{flex:1;background:transparent;border:1px solid #4a4b57;border-radius:12px;padding:15px 18px;color:#fff;font-family:inherit;font-size:15px;}
@@ -232,6 +234,8 @@ footer{margin-top:30px;}
 .foot-bottom .socials a{width:34px;height:34px;border-radius:50%;background:#fff;color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;}
 .foot-bottom .socials a:hover{background:var(--accent);}
 .foot-bottom p{font-size:15px;color:#cfced8;}
+.foot-bottom .foot-legal{max-width:640px;}
+.foot-bottom .legal{margin-top:8px;font-size:13px;color:#a3a2af;line-height:1.7;}
 
 /* ---------- responsive ---------- */
 @media (max-width:1080px){
@@ -459,10 +463,17 @@ footer{margin-top:30px;}
       <div class="contact-intro">
         <div class="big">Let's talk about your project.</div>
         <p class="contact-sub">Whether it's software, AI, or ISO/IEC 29110 certification, send us a note and we'll get back to you within one business day.</p>
-        <a class="btn" href="mailto:hello@buildbeetter.cc">Email us</a>
+        <div class="cta-row">
+          <a class="btn" href="mailto:hello@buildbetter.cc">Email us</a>
+          <a class="btn ghost" href="https://m.me/61590673354337" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.45 2.91h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg>
+            Message us on Facebook
+          </a>
+        </div>
       </div>
       <aside class="contact-aside">
-        <div class="row"><span class="ic">@</span> hello@buildbeetter.cc</div>
+        <div class="row"><span class="ic">@</span> <a href="mailto:hello@buildbetter.cc">hello@buildbetter.cc</a></div>
+        <div class="row"><span class="ic">✆</span> <a href="tel:+66891763372">+66 89 176 3372</a></div>
         <div class="row"><span class="ic">⌖</span> Remote-first · Worldwide</div>
         <p style="color:var(--muted);font-size:15px;margin-top:8px;">Mon–Fri, 9am–6pm. We reply to every enquiry — even the small ones.</p>
       </aside>
@@ -488,13 +499,19 @@ footer{margin-top:30px;}
       <div class="foot-mid">
         <div class="foot-contact">
           <h4>Get in touch</h4>
-          <p>hello@buildbeetter.cc</p>
+          <p><a href="mailto:hello@buildbetter.cc">hello@buildbetter.cc</a></p>
+          <p><a href="tel:+66891763372">+66 89 176 3372</a></p>
           <p>Remote-first · Worldwide</p>
           <div class="foot-logo"><img src="assets/bb-logo-full.png" alt="buildbetter — AI &amp; Software Development" /></div>
         </div>
       </div>
       <div class="foot-bottom">
-        <p>© 2026 buildbetter. All rights reserved.</p>
+        <div class="foot-legal">
+          <p>© 2026 buildbetter. All rights reserved.</p>
+          <p class="legal">Buildbetter Consulting Co., Ltd. (บริษัท บิลด์เบทเทอร์ คอนซัลติ้ง จำกัด)<br />
+            Registered with the Department of Business Development, Ministry of Commerce, Thailand<br />
+            Company registration &amp; Tax ID: 0105569148417</p>
+        </div>
         <div class="socials">
           <a href="https://www.linkedin.com/company/buildbetter-th/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
           <a href="https://www.facebook.com/profile.php?id=61590673354337" target="_blank" rel="noopener" aria-label="Facebook">fb</a>
