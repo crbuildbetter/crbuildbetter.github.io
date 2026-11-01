@@ -82,6 +82,8 @@ section{padding:70px 0;}
 
 /* ---------- services ---------- */
 .services-section{padding-top:36px;}
+.service-group + .service-group{margin-top:54px;}
+.service-group h2{font-size:30px;margin-bottom:26px;}
 .cards{display:grid;grid-template-columns:1fr 1fr;gap:38px;}
 .card{
   border:1px solid var(--ink);border-radius:var(--radius);
@@ -183,56 +185,89 @@ footer{margin-top:30px;}
       <h1 class="tag">Services</h1>
       <p>From the first line of code to formal certification, we cover the full lifecycle of building better software.</p>
     </div>
-    <div class="cards">
+    <div class="service-group">
+      <h2>Software</h2>
+      <div class="cards">
 
-      <article class="card">
-        <span class="label">Custom Software<br/>Development</span>
-        <p class="desc">Web, mobile, and cloud applications built to last — architected for reliability, scale, and maintainability.</p>
-        <div class="spacer"></div>
-        <a class="learn" href="index.html#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
-        <div class="blob"></div>
-      </article>
+        <article class="card">
+          <span class="label">Product Design</span>
+          <p class="desc">User research and interface design, from first concept through polished UI, for products people actually want to use.</p>
+          <div class="spacer"></div>
+          <a class="learn" href="index.html#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
+          <div class="blob"></div>
+        </article>
 
-      <article class="card tint">
-        <span class="label">AI Solutions</span>
-        <p class="desc">Practical machine learning and generative AI integrated into your products and workflows — not science projects.</p>
-        <div class="spacer"></div>
-        <a class="learn" href="index.html#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
-        <div class="blob"></div>
-      </article>
+        <article class="card tint">
+          <span class="label">Custom Software<br/>Development</span>
+          <p class="desc">Web, mobile, and cloud applications built to last — architected for reliability, scale, and maintainability.</p>
+          <div class="spacer"></div>
+          <a class="learn" href="index.html#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
+          <div class="blob"></div>
+        </article>
 
-      <article class="card dark">
-        <span class="label">ISO/IEC 29110<br/>Certification</span>
-        <p class="desc">End-to-end consulting to prepare your team for the ISO/IEC 29110 audit — the international standard for very small entities (VSEs).</p>
-        <div class="spacer"></div>
-        <a class="learn" href="index.html#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
-        <div class="blob"></div>
-      </article>
+        <article class="card dark">
+          <span class="label">Software Engineering</span>
+          <p class="desc">Full-stack engineering focused on clean code, testing, and developer experience.</p>
+          <div class="spacer"></div>
+          <a class="learn" href="index.html#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
+          <div class="blob"></div>
+        </article>
 
-      <article class="card">
-        <span class="label">Process Assessment<br/>&amp; Gap Analysis</span>
-        <p class="desc">Gap analysis and readiness reviews against engineering best practices, so you know exactly what to fix first.</p>
-        <div class="spacer"></div>
-        <a class="learn" href="index.html#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
-        <div class="blob"></div>
-      </article>
+        <article class="card">
+          <span class="label">Quality Assurance<br/>and Testing</span>
+          <p class="desc">Automated and manual testing pipelines that let you ship with confidence and catch regressions early.</p>
+          <div class="spacer"></div>
+          <a class="learn" href="index.html#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
+          <div class="blob"></div>
+        </article>
 
-      <article class="card tint">
-        <span class="label">Quality Assurance<br/>&amp; Testing</span>
-        <p class="desc">Automated and manual testing pipelines that let you ship with confidence and catch regressions early.</p>
-        <div class="spacer"></div>
-        <a class="learn" href="index.html#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
-        <div class="blob"></div>
-      </article>
+      </div>
+    </div>
 
-      <article class="card dark">
-        <span class="label">Team Augmentation</span>
-        <p class="desc">Senior engineers and AI specialists who plug straight into your team, exactly when and where you need them.</p>
-        <div class="spacer"></div>
-        <a class="learn" href="index.html#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
-        <div class="blob"></div>
-      </article>
+    <div class="service-group">
+      <h2>AI &amp; Data Solutions</h2>
+      <div class="cards">
 
+        <article class="card tint">
+          <span class="label">Custom AI &amp; Data<br/>Solutions</span>
+          <p class="desc">Machine learning, generative AI, and data solutions built to fit your business needs and integrated into your products and workflows.</p>
+          <div class="spacer"></div>
+          <a class="learn" href="index.html#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
+          <div class="blob"></div>
+        </article>
+
+        <article class="card dark">
+          <span class="label">Team Augmentation</span>
+          <p class="desc">Senior engineers and AI specialists who plug straight into your team, exactly when and where you need them.</p>
+          <div class="spacer"></div>
+          <a class="learn" href="index.html#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
+          <div class="blob"></div>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="service-group">
+      <h2>ISO/IEC 29110</h2>
+      <div class="cards">
+
+        <article class="card dark">
+          <span class="label">ISO/IEC 29110<br/>Certification</span>
+          <p class="desc">End-to-end consulting to prepare your team for the ISO/IEC 29110 audit — the international standard for very small entities (VSEs).</p>
+          <div class="spacer"></div>
+          <a class="learn" href="index.html#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
+          <div class="blob"></div>
+        </article>
+
+        <article class="card">
+          <span class="label">Process Assessment<br/>&amp; Gap Analysis</span>
+          <p class="desc">Gap analysis and readiness reviews against engineering best practices, so you know exactly what to fix first.</p>
+          <div class="spacer"></div>
+          <a class="learn" href="index.html#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
+          <div class="blob"></div>
+        </article>
+
+      </div>
     </div>
   </div>
 </section>
