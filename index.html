@@ -156,28 +156,6 @@ body.solid-head .hero h1 .grad{background:none;-webkit-text-fill-color:currentCo
 .band .art .markimg{position:absolute;width:120px;right:60px;top:40px;border-radius:18px;}
 .band .art .bigstar{position:absolute;color:var(--accent);font-size:60px;right:0;bottom:0;}
 
-/* ---------- team ---------- */
-.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
-.member{
-  border:1px solid var(--ink);border-radius:var(--radius-sm);
-  box-shadow:var(--shadow);padding:30px;background:var(--paper);
-  display:flex;flex-direction:column;gap:14px;
-}
-.member .top{display:flex;align-items:flex-end;gap:18px;}
-.ph{
-  width:84px;height:84px;border-radius:50%;flex:none;
-  background:
-    repeating-linear-gradient(45deg,#e9e5f7 0 8px,#f4f1fc 8px 16px);
-  border:1px solid var(--ink);position:relative;overflow:hidden;
-}
-.ph::after{content:"photo";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:"Space Mono",monospace;font-size:11px;color:#9a93b8;}
-.member .lk{margin-left:auto;width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;align-self:flex-start;}
-.member .nm{font-size:21px;font-weight:600;}
-.member .m-title{font-size:22px;font-weight:600;letter-spacing:-0.01em;line-height:1.15;}
-.member .role{font-size:15px;color:var(--accent-2);font-weight:500;margin-top:-8px;}
-.member hr{border:none;border-top:1px solid #e0dcef;margin:4px 0;}
-.member .bio{font-size:15px;color:var(--muted);}
-
 /* ---------- contact ---------- */
 .contact-panel{
   background:var(--tint);border-radius:var(--radius);
@@ -240,7 +218,6 @@ footer{margin-top:30px;}
 /* ---------- responsive ---------- */
 @media (max-width:1080px){
   .hero h1{font-size:50px;}
-  .team-grid{grid-template-columns:1fr 1fr;}
 }
 @media (max-width:880px){
   .wrap{padding:0 24px;}
@@ -255,7 +232,6 @@ footer{margin-top:30px;}
   .cards{grid-template-columns:1fr;}
   .band,.contact-panel{grid-template-columns:1fr;}
   .band .art,.contact-panel .cstar{display:none;}
-  .team-grid{grid-template-columns:1fr;}
   .foot-mid{grid-template-columns:1fr;}
   .sec-head h2,.sec-head .tag{font-size:34px;}
 }
@@ -279,7 +255,7 @@ footer{margin-top:30px;}
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#services">Services</a></li>
-      <li><a href="#team">Team</a></li>
+      <li><a href="team.html">Team</a></li>
       <li><a href="jobs.html">Jobs</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -402,55 +378,6 @@ footer{margin-top:30px;}
   </div>
 </section>
 
-<!-- ===== TEAM ===== -->
-<section id="team">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="tag">Team</span>
-      <p>Engineers, AI specialists, and certified ISO/IEC 29110 consultants who have shipped real products and prepared teams for audit.</p>
-    </div>
-    <div class="team-grid">
-
-      <article class="member">
-        <div class="m-title">Custom Software Development</div>
-        <hr/>
-        <p class="bio">15+ years building software for startups and enterprises — architecture, delivery, and everything in between.</p>
-      </article>
-
-      <article class="member">
-        <div class="m-title">AI &amp; Machine Learning</div>
-        <hr/>
-        <p class="bio">Takes AI from notebook to production — recommendation, vision, and generative systems.</p>
-      </article>
-
-      <article class="member">
-        <div class="m-title">ISO/IEC 29110 Readiness</div>
-        <hr/>
-        <p class="bio">Certified consultants who prepare your team for the ISO/IEC 29110 audit — pragmatic, audit-ready guidance for VSEs.</p>
-      </article>
-
-      <article class="member">
-        <div class="m-title">Software Engineering</div>
-        <hr/>
-        <p class="bio">Full-stack engineers focused on clean code, testing, and developer experience.</p>
-      </article>
-
-      <article class="member">
-        <div class="m-title">Quality Assurance &amp; Testing</div>
-        <hr/>
-        <p class="bio">Builds the automated pipelines and quality gates that keep every release dependable.</p>
-      </article>
-
-      <article class="member">
-        <div class="m-title">Product Design</div>
-        <hr/>
-        <p class="bio">Designs interfaces people actually want to use — from research through polished UI.</p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
 <!-- ===== CONTACT ===== -->
 <section id="contact">
   <div class="wrap">
@@ -491,7 +418,7 @@ footer{margin-top:30px;}
         <a class="brand" href="#top"><img src="assets/bb-mark.png" alt="buildbetter mark" /><span class="name">buildbetter</span></a>
         <ul class="foot-nav">
           <li><a href="#services">Services</a></li>
-          <li><a href="#team">Team</a></li>
+          <li><a href="team.html">Team</a></li>
           <li><a href="jobs.html">Jobs</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
