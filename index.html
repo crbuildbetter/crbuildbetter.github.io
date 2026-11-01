@@ -110,36 +110,6 @@ body.solid-head .hero h1 .grad{background:none;-webkit-text-fill-color:currentCo
 .proof .item{display:flex;align-items:center;gap:12px;font-size:17px;font-weight:500;}
 .proof .item .star{color:var(--accent-2);font-size:20px;}
 
-/* ---------- services ---------- */
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:38px;}
-.card{
-  border:1px solid var(--ink);border-radius:var(--radius);
-  padding:46px;box-shadow:var(--shadow);
-  display:flex;flex-direction:column;gap:18px;min-height:300px;
-  background:var(--paper);transition:transform .18s ease;
-}
-.card:hover{transform:translateY(-4px);}
-.card.tint{background:var(--accent);}
-.card.dark{background:var(--ink);color:#fff;}
-.card .label{align-self:flex-start;background:var(--accent);color:var(--ink);border-radius:7px;padding:2px 8px;font-size:26px;font-weight:600;line-height:1.18;}
-.card.tint .label{background:#fff;}
-.card.dark .label{background:var(--accent);}
-.card .desc{font-size:17px;color:inherit;opacity:.92;}
-.card.dark .desc{opacity:.8;}
-.card .spacer{flex:1;}
-.card .learn{display:inline-flex;align-items:center;gap:14px;font-size:18px;font-weight:500;cursor:pointer;}
-.card .arrow{width:42px;height:42px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;flex:none;transition:.18s;}
-.card.dark .arrow{background:var(--accent);}
-.card .arrow svg{width:18px;height:18px;}
-.card .arrow svg path{stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;}
-.card.dark .arrow svg path{stroke:var(--ink);}
-.card .learn:hover .arrow{background:var(--accent-2);}
-.card .deco{position:absolute;}
-.card{position:relative;overflow:hidden;}
-.card .blob{position:absolute;right:-30px;bottom:-30px;width:150px;height:150px;border-radius:50%;background:var(--grad);opacity:.16;filter:blur(2px);}
-.card.dark .blob{opacity:.5;}
-.card.tint .blob{opacity:.28;}
-
 /* ---------- CTA banner ---------- */
 .cta-band .wrap{padding-top:0;padding-bottom:0;}
 .band{
@@ -229,7 +199,6 @@ footer{margin-top:30px;}
   .nav-cta .btn{display:none;}
   .hero-grid{grid-template-columns:1fr;gap:30px;}
   .hero h1{font-size:44px;}
-  .cards{grid-template-columns:1fr;}
   .band,.contact-panel{grid-template-columns:1fr;}
   .band .art,.contact-panel .cstar{display:none;}
   .foot-mid{grid-template-columns:1fr;}
@@ -238,7 +207,6 @@ footer{margin-top:30px;}
 @media (max-width:480px){
   body{font-size:16px;}
   .hero h1{font-size:36px;}
-  .card{padding:32px;}
   .foot{padding:40px 26px 30px;}
   .contact-panel{padding:36px 26px;}
 }
@@ -254,7 +222,7 @@ footer{margin-top:30px;}
       <span class="name">buildbetter</span>
     </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#services">Services</a></li>
+      <li><a href="services.html">Services</a></li>
       <li><a href="team.html">Team</a></li>
       <li><a href="jobs.html">Jobs</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -276,7 +244,7 @@ footer{margin-top:30px;}
       <p class="lede">We design and ship software and AI for small businesses and enterprises — and guide your team to <strong>ISO/IEC&nbsp;29110</strong> certification, the international standard for software engineering.</p>
       <div class="cta-row">
         <a href="#contact" class="btn">Book a free consultation</a>
-        <a href="#services" class="btn ghost">Explore services</a>
+        <a href="services.html" class="btn ghost">Explore services</a>
       </div>
     </div>
     <div class="hero-visual" aria-hidden="true">
@@ -297,67 +265,6 @@ footer{margin-top:30px;}
     <div class="item"><svg class="star" viewBox="0 0 24 24"><path d="M12 0c.7 6 5.3 10.6 12 12-6.7 1.4-11.3 6-12 12-.7-6-5.3-10.6-12-12C6.7 10.6 11.3 6 12 0z"/></svg> Small business to enterprise</div>
   </div>
 </div>
-
-<!-- ===== SERVICES ===== -->
-<section id="services">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="tag">Services</span>
-      <p>From the first line of code to formal certification, we cover the full lifecycle of building better software.</p>
-    </div>
-    <div class="cards">
-
-      <article class="card">
-        <span class="label">Custom Software<br/>Development</span>
-        <p class="desc">Web, mobile, and cloud applications built to last — architected for reliability, scale, and maintainability.</p>
-        <div class="spacer"></div>
-        <a class="learn" href="#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
-        <div class="blob"></div>
-      </article>
-
-      <article class="card tint">
-        <span class="label">AI Solutions</span>
-        <p class="desc">Practical machine learning and generative AI integrated into your products and workflows — not science projects.</p>
-        <div class="spacer"></div>
-        <a class="learn" href="#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
-        <div class="blob"></div>
-      </article>
-
-      <article class="card dark">
-        <span class="label">ISO/IEC 29110<br/>Certification</span>
-        <p class="desc">End-to-end consulting to prepare your team for the ISO/IEC 29110 audit — the international standard for very small entities (VSEs).</p>
-        <div class="spacer"></div>
-        <a class="learn" href="#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
-        <div class="blob"></div>
-      </article>
-
-      <article class="card">
-        <span class="label">Process Assessment<br/>&amp; Gap Analysis</span>
-        <p class="desc">Gap analysis and readiness reviews against engineering best practices, so you know exactly what to fix first.</p>
-        <div class="spacer"></div>
-        <a class="learn" href="#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
-        <div class="blob"></div>
-      </article>
-
-      <article class="card tint">
-        <span class="label">Quality Assurance<br/>&amp; Testing</span>
-        <p class="desc">Automated and manual testing pipelines that let you ship with confidence and catch regressions early.</p>
-        <div class="spacer"></div>
-        <a class="learn" href="#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
-        <div class="blob"></div>
-      </article>
-
-      <article class="card dark">
-        <span class="label">Team Augmentation</span>
-        <p class="desc">Senior engineers and AI specialists who plug straight into your team, exactly when and where you need them.</p>
-        <div class="spacer"></div>
-        <a class="learn" href="#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
-        <div class="blob"></div>
-      </article>
-
-    </div>
-  </div>
-</section>
 
 <!-- ===== CTA BANNER ===== -->
 <section class="cta-band">
@@ -417,7 +324,7 @@ footer{margin-top:30px;}
       <div class="foot-top">
         <a class="brand" href="#top"><img src="assets/bb-mark.png" alt="buildbetter mark" /><span class="name">buildbetter</span></a>
         <ul class="foot-nav">
-          <li><a href="#services">Services</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="team.html">Team</a></li>
           <li><a href="jobs.html">Jobs</a></li>
           <li><a href="#contact">Contact</a></li>
