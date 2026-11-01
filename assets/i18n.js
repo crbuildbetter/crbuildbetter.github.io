@@ -1,97 +1,97 @@
-// Language switcher. English lives in the page markup; Thai lives here.
-var I18N_TH = {
-  "nav.services": "บริการ",
-  "nav.team": "ทีมงาน",
-  "nav.jobs": "ร่วมงานกับเรา",
-  "nav.contact": "ติดต่อ",
-  "cta.contact": "ติดต่อเรา",
-  "home.h1": "สร้างซอฟต์แวร์ที่<span class=\"grad\">ดีกว่า</span> AI ที่ฉลาดกว่า และบริษัทซอฟต์แวร์ที่ได้รับการรับรองมาตรฐาน",
-  "home.lede": "เราออกแบบและส่งมอบซอฟต์แวร์และ AI ให้ทั้งธุรกิจขนาดเล็กและองค์กรขนาดใหญ่ พร้อมนำทีมของคุณสู่การรับรอง <strong>ISO/IEC&nbsp;29110</strong> ซึ่งเป็นมาตรฐานสากลด้านวิศวกรรมซอฟต์แวร์",
-  "home.book": "นัดปรึกษาฟรี",
-  "home.explore": "ดูบริการของเรา",
-  "home.band.title": "มาสร้างสิ่งที่ดีกว่าไปด้วยกัน",
-  "home.band.text": "นัดปรึกษาฟรี 30 นาที เราจะช่วยวางแผนงานด้านซอฟต์แวร์ AI หรือการรับรองมาตรฐานให้คุณ โดยไม่มีข้อผูกมัด",
-  "contact.intro": "บอกเราว่าคุณกำลังสร้างอะไรอยู่ เราจะติดต่อกลับภายในหนึ่งวันทำการ",
-  "contact.big": "มาคุยกันเรื่องโปรเจกต์ของคุณ",
-  "contact.sub": "ไม่ว่าจะเป็นเรื่องซอฟต์แวร์ AI หรือการรับรอง ISO/IEC 29110 ส่งข้อความหาเราได้เลย แล้วเราจะติดต่อกลับภายในหนึ่งวันทำการ",
-  "contact.email": "ส่งอีเมลถึงเรา",
-  "contact.hours": "จันทร์–ศุกร์ 9:00–18:00 น. เราตอบทุกคำถาม แม้จะเป็นเรื่องเล็กน้อย",
-  "foot.touch": "ติดต่อเรา",
-  "foot.remote": "เน้นทำงานทางไกล · ทั่วโลก",
-  "foot.rights": "© 2026 buildbetter สงวนลิขสิทธิ์",
-  "services.intro": "ตั้งแต่โค้ดบรรทัดแรกจนถึงการรับรองมาตรฐาน เราดูแลครบทุกขั้นตอนของการสร้างซอฟต์แวร์ที่ดีกว่า",
-  "group.software": "ซอฟต์แวร์",
-  "group.ai": "โซลูชัน AI และข้อมูล",
-  "s.design": "การออกแบบผลิตภัณฑ์",
-  "s.design.d": "วิจัยผู้ใช้และออกแบบอินเทอร์เฟซ ตั้งแต่ไอเดียจนถึง UI ที่สมบูรณ์ เพื่อสร้างผลิตภัณฑ์ซอฟต์แวร์ที่ผู้คนอยากใช้งานจริง",
-  "s.custom": "การพัฒนาซอฟต์แวร์<br/>ตามความต้องการ",
-  "s.custom.d": "แอปพลิเคชันเว็บ และ แอปพลิเคชันมือถือที่ใช้งานได้ยาวนาน ออกแบบให้รองรับการขยายตัว และดูแลรักษาง่าย",
-  "s.eng": "วิศวกรรมซอฟต์แวร์",
-  "s.eng.d": "งานวิศวกรรมแบบ Full-stack ที่ให้ความสำคัญกับการออกแบบสถาปัตยกรรมและคุณภาพของโค้ด",
-  "s.qa": "การประกันคุณภาพ<br/>และการทดสอบ",
-  "s.qa.d": "กระบวนการทดสอบทั้งแบบอัตโนมัติและแบบแมนนวล ช่วยให้ส่งมอบงานได้อย่างมั่นใจและพบข้อผิดพลาดตั้งแต่เนิ่น ๆ",
-  "s.ai": "โซลูชัน AI และข้อมูล<br/>ตามความต้องการ",
-  "s.ai.d": "โซลูชัน Machine Learning, Generative AI และข้อมูล ที่สร้างให้ตรงกับความต้องการทางธุรกิจ และผสานเข้ากับผลิตภัณฑ์และขั้นตอนการทำงานของคุณ",
-  "s.aug": "การเสริมทีม",
-  "s.aug.d": "วิศวกรอาวุโสและผู้เชี่ยวชาญด้าน AI ที่พร้อมเข้าช่วยแก้ไขปัญหาในระบบหรืองานที่คุณต้องการ",
-  "s.iso": "การรับรอง<br/>ISO/IEC 29110",
-  "s.iso.d": "ให้คำปรึกษาครบวงจรเพื่อเตรียมทีมของคุณสู่การตรวจประเมิน ISO/IEC 29110 มาตรฐานสากลสำหรับองค์กรขนาดเล็กมาก (VSEs)",
-  "s.gap": "การประเมินกระบวนการ<br/>และการวิเคราะห์ช่องว่าง",
-  "s.gap.d": "วิเคราะห์ช่องว่างและทบทวนความพร้อมเทียบกับแนวปฏิบัติที่ดีทางวิศวกรรมซอฟต์แวร์ เพื่อให้รู้ชัดว่าควรแก้ไขอะไรก่อน",
-  "team.intro": "เราคือทีมวิศวกรซอฟต์แวร์ ผู้เชี่ยวชาญด้าน AI และที่ปรึกษา ISO/IEC 29110 เราส่งมอบผลิตภัณฑ์ที่ใช้งานจริงและเตรียมทีมต่าง ๆ สู่การตรวจประเมินมาแล้วจำนวนมาก",
-  "t.sw": "ทีมพัฒนาซอฟต์แวร์",
-  "t.sw.d": "ทีมพัฒนาซอฟต์แวร์ของเรามีประสบการณ์มากกว่า 10 ปี",
-  "t.ds": "ทีมวิทยาศาสตร์ข้อมูล",
-  "t.ds.d": "ทีมวิทยาศาสตร์ข้อมูลของเรามีประสบการณ์มากกว่า 8 ปีด้านการวิเคราะห์ข้อมูลและการวิจัย",
-  "t.iso": "ทีมที่ปรึกษา ISO/IEC 29110",
-  "t.iso.d": "ทีมที่ปรึกษา ISO/IEC 29110 ของเรามีประสบการณ์ 5 ปี และได้เตรียมความพร้อมให้บริษัทมากกว่า 30 แห่งสู่การตรวจประเมิน",
-  "jobs.h1": "มาร่วมงานและสร้างสิ่งที่<span class=\"grad\">ดีกว่า</span>ไปกับเรา",
-  "jobs.lede": "เราคือทีมวิศวกรซอฟต์แวร์ ผู้เชี่ยวชาญด้าน AI และที่ปรึกษา ISO/IEC&nbsp;29110 ที่เน้นการทำงานแบบ remote-first หากคุณใส่ใจในการคราฟต์ซอฟต์แวร์ คุณภาพ และการส่งมอบงานที่ใช้ได้ยาวนาน เรายินดีอย่างยิ่งที่จะได้คุณมาร่วมงาน",
-  "jobs.open": "ตำแหน่งที่เปิดรับ",
-  "jobs.open.d": "ทุกตำแหน่งเน้นการทำงานทางไกล เว้นแต่จะระบุไว้เป็นอย่างอื่น เราพิจารณาทุกใบสมัครและตอบกลับภายในหนึ่งสัปดาห์",
-  "jobs.spec.t": "ไม่พบตำแหน่งที่คุณสนใจ?",
-  "jobs.spec.d": "เรายินดีเสมอที่จะได้รู้จักคนเก่ง ส่ง CV พร้อมเล่าสั้น ๆ ว่าคุณอยากทำงานด้านใด เราเก็บทุกใบสมัครไว้ในระบบ",
-  "jobs.spec.b": "ส่งใบสมัครล่วงหน้า",
-  "learn": "ดูเพิ่มเติม",
-  "apply": "สมัครเลย",
-  "home.chip1": "การพัฒนา AI และซอฟต์แวร์",
-  "home.chip2": "พร้อมสู่ ISO/IEC 29110",
-  "home.proof1": "ที่ปรึกษา ISO/IEC 29110 ที่ผ่านการรับรอง",
-  "home.proof2": "AI ตั้งแต่ต้นแบบจนถึงใช้งานจริง",
-  "home.proof3": "ตั้งแต่ธุรกิจขนาดเล็กถึงองค์กรขนาดใหญ่",
-  "contact.fb": "ส่งข้อความทาง Facebook",
-  "label.home": "หน้าแรก buildbetter",
-  "label.menu": "เมนู",
-  "title.index": "buildbetter — ซอฟต์แวร์ AI และมาตรฐาน ISO/IEC 29110",
-  "title.services": "บริการ — buildbetter",
-  "title.team": "ทีมงาน — buildbetter",
-  "title.jobs": "ร่วมงานกับเรา — buildbetter",
-  "foot.legal": "บริษัท บิลด์เบทเทอร์ คอนซัลติ้ง จำกัด (Buildbetter Consulting Co., Ltd.)<br />\n            จดทะเบียนนิติบุคคลกับกรมพัฒนาธุรกิจการค้า กระทรวงพาณิชย์<br />\n            เลขทะเบียนนิติบุคคล / เลขประจำตัวผู้เสียภาษี: 0105569148417",
-  "job.0": "buildbetter กำลังเปิดรับสมัคร AI / Data Science Engineer ที่มีความสามารถสูงและพร้อมลุยงานรอบด้านมาร่วมทีม — ดูแลวงจรชีวิตของระบบที่ขับเคลื่อนด้วยข้อมูลตั้งแต่ต้นจนจบ ตั้งแต่ Pipeline ข้อมูลดิบไปจนถึงการนำโมเดลอัจฉริยะขึ้นสู่ Production",
-  "job.1": "ดูรายละเอียดตำแหน่งงาน",
-  "job.2": "เกี่ยวกับเรา",
-  "job.3": "บริษัท buildbetter เป็นบริษัทคู่ค้าของ ProGaming ซึ่งเป็นผู้เชี่ยวชาญด้านการพัฒนาซอฟต์แวร์ AI application และ AI solution ในรูปแบบต่าง ๆ เรากำลังมองหา AI / Data Science Engineer ที่มีความสามารถสูงและพร้อมลุยงานรอบด้านมาร่วมทีม",
-  "job.4": "ในบทบาทนี้ คุณจะได้เป็นผู้ดูแลวงจรชีวิตผลิตภัณฑ์ (Lifecycle) ของระบบที่ขับเคลื่อนด้วยข้อมูลตั้งแต่ต้นจนจบ คุณไม่ได้ทำแค่สร้างโมเดลในเชิงทฤษฎีเท่านั้น แต่จะได้สร้าง Pipeline ข้อมูลดิบและผลักดันโมเดลอัจฉริยะเข้าสู่สภาพแวดล้อมการใช้งานจริง (Production) หากคุณชอบความท้าทายในการออกแบบสถาปัตยกรรมที่ซับซ้อนและปรับใช้แอปพลิเคชัน AI ในโลกจริง เราอยากร่วมงานกับคุณ!",
-  "job.5": "ความรับผิดชอบ",
-  "job.6": "<strong>Data Collection (การจัดเก็บข้อมูล):</strong> ออกแบบ สร้าง และดูแล Pipeline การเก็บรวบรวมข้อมูลแบบอัตโนมัติที่รองรับการขยายตัว (Scalable) จากแหล่งข้อมูลต่าง ๆ เช่น ฐานข้อมูล, API, System Logs และการเชื่อมต่อกับระบบภายนอก (Third-party Integrations)",
-  "job.7": "<strong>Data Cleansing &amp; Preparation (การทำความสะอาดและเตรียมข้อมูล):</strong> ออกแบบกระบวนการทำความสะอาดข้อมูล (Preprocessing) การแปลงข้อมูล (Parsing) และการทำให้ข้อมูลเป็นมาตรฐาน (Normalization) รวมถึงทำ Feature Engineering และจัดการกับข้อมูลที่ขาดหายหรือไม่สอดคล้องกัน เพื่อสร้างชุดข้อมูลที่มีคุณภาพสูง",
-  "job.8": "<strong>Modeling (การสร้างโมเดล):</strong> คัดเลือก ออกแบบ และฝึกฝน (Train) โมเดล Machine Learning, Deep Learning หรือโมเดลทางสถิติ ที่เหมาะสมที่สุดในการแก้โจทย์ทางธุรกิจและฟีเจอร์ของแอปพลิเคชัน",
-  "job.9": "<strong>Evaluation (การประเมินผล):</strong> สร้างกรอบการประเมินผลที่รัดกุม ตรวจสอบโมเดลกับเกณฑ์มาตรฐาน (Benchmarks) ทั้งในด้านประสิทธิภาพ (Performance) ความแม่นยำ (Accuracy) ความสามารถในการรองรับการขยายตัว (Scalability) และความลำเอียงของข้อมูล (Bias) ก่อนนำไปใช้งานจริง",
-  "job.10": "<strong>Deployment (การติดตั้งและเปิดใช้งาน):</strong> ทำ Containerization ปรับใช้ (Deploy) และขยายขนาดโมเดล AI สู่สภาพแวดล้อมการใช้งานจริง (Production) ผ่าน Microservices, REST/GraphQL APIs และเครื่องมือ MLOps เพื่อให้มั่นใจว่าสามารถผสานรวมกับแอปพลิเคชันและเกมของเราได้อย่างราบรื่น",
-  "job.11": "<strong>Monitoring &amp; Optimization (การติดตามและเพิ่มประสิทธิภาพ):</strong> ติดตามตรวจสอบ Model Drift และประสิทธิภาพในระบบจริงอย่างต่อเนื่อง พร้อมทั้งตั้งค่าลูปการฝึกฝนโมเดลซ้ำแบบอัตโนมัติ (Automated Retraining Loops) และรอบการปรับปรุงประสิทธิภาพ",
-  "job.12": "<strong>Collaboration (การทำงานร่วมกัน):</strong> ร่วมมือกับนักพัฒนาซอฟต์แวร์ (Software Developers) ผู้จัดการผลิตภัณฑ์ (Product Managers) และผู้มีส่วนเกี่ยวข้อง เพื่อเปลี่ยนเป้าหมายทางธุรกิจให้เป็นโซลูชันทางเทคนิคที่สามารถใช้งานได้จริง",
-  "job.13": "คุณสมบัติ",
-  "job.14": "วุฒิการศึกษาระดับปริญญาตรีหรือปริญญาโท สาขาวิทยาการคอมพิวเตอร์ (Computer Science), วิทยาศาสตร์ข้อมูล (Data Science), สถิติ, คณิตศาสตร์ หรือสาขาเชิงปริมาณที่เกี่ยวข้อง",
-  "job.15": "มีประสบการณ์ตรง (Hands-on Experience) ครอบคลุมวงจรชีวิตของการจัดการ Pipeline ข้อมูลและการพัฒนา Machine Learning ทั้งระบบ",
-  "job.16": "มีความเชี่ยวชาญในภาษา Python และเครื่องมือในระบบนิเวศที่เกี่ยวข้อง (Pandas, NumPy, Scikit-Learn, SciPy)",
-  "job.17": "เข้าใจอย่างลึกซึ้งในเฟรมเวิร์กหลักของ ML/DL (เช่น TensorFlow, PyTorch, Keras)",
-  "job.18": "มีความสามารถที่แข็งแกร่งในด้าน SQL และการออกแบบฐานข้อมูล (สถาปัตยกรรม Relational และ NoSQL)",
-  "job.19": "มีประสบการณ์เกี่ยวกับ Containerization และสถาปัตยกรรมคลาวด์ (Docker, Kubernetes, AWS, GCP หรือ Azure) สำหรับการให้บริการโมเดลในวงกว้าง",
-  "job.20": "หากมีความคุ้นเคยกับแนวคิด MLOps และ CI/CD Pipelines สำหรับ Machine Learning จะพิจารณาเป็นพิเศษ",
-  "job.21": "มีแนวคิดในการแก้ปัญหาที่ดี (Problem-solving Mindset) มีทักษะการวิเคราะห์ และมีทัศนคติเชิงรุกในการทำงานร่วมกันเป็นทีม",
-  "job.22": "วิธีการสมัคร",
-  "job.23": "หากคุณพร้อมที่จะสร้างอนาคตของแอปพลิเคชันอัจฉริยะไปกับเรา กรุณาส่งประวัติการทำงาน (Resume) พอร์ตโฟลิโอผลงานที่ผ่านมา (Portfolio) และเงินเดือนที่คาดหวังมาที่ 📧 <a href=\"mailto:hr@buildbetter.cc\" style=\"font-weight:600;color:var(--accent-2);\">hr@buildbetter.cc</a>",
-  "job.status": "เปิดรับสมัคร"
+// Language switcher. Thai lives in the page markup; English lives here.
+var I18N_EN = {
+  "title.index": "buildbetter — Software, AI &amp; Certification",
+  "nav.services": "Services",
+  "nav.team": "Team",
+  "nav.jobs": "Jobs",
+  "nav.contact": "Contact",
+  "cta.contact": "Contact us",
+  "home.h1": "Build <span class=\"grad\">better</span> software, smarter AI, and certified software companies.",
+  "home.lede": "We design and ship software and AI for small businesses and enterprises — and guide your team to <strong>ISO/IEC&nbsp;29110</strong> certification, the international standard for software engineering.",
+  "home.book": "Book a free consultation",
+  "home.explore": "Explore services",
+  "home.chip1": "AI &amp; Software Development",
+  "home.chip2": "ISO/IEC 29110 ready",
+  "home.proof1": "Certified ISO/IEC 29110 consultants",
+  "home.proof2": "AI from prototype to production",
+  "home.proof3": "Small business to enterprise",
+  "home.band.title": "Let's build something better.",
+  "home.band.text": "Book a free 30-minute consultation. We'll map out your software, AI, or certification roadmap — no strings attached.",
+  "foot.touch": "Get in touch",
+  "contact.intro": "Tell us what you're building. We'll get back to you within one business day.",
+  "contact.big": "Let's talk about your project.",
+  "contact.sub": "Whether it's software, AI, or ISO/IEC 29110 certification, send us a note and we'll get back to you within one business day.",
+  "contact.email": "Email us",
+  "contact.fb": "Message us on Facebook",
+  "foot.remote": "Remote-first · Worldwide",
+  "contact.hours": "Mon–Fri, 9am–6pm. We reply to every enquiry — even the small ones.",
+  "foot.rights": "© 2026 buildbetter. All rights reserved.",
+  "foot.legal": "Buildbetter Consulting Co., Ltd. (บริษัท บิลด์เบทเทอร์ คอนซัลติ้ง จำกัด)<br />\n            Registered with the Department of Business Development, Ministry of Commerce, Thailand<br />\n            Company registration &amp; Tax ID: 0105569148417",
+  "label.home": "buildbetter home",
+  "label.menu": "Menu",
+  "title.services": "Services — buildbetter",
+  "services.intro": "From the first line of code to formal certification, we cover the full lifecycle of building better software.",
+  "group.software": "Software",
+  "s.design": "Product Design",
+  "s.design.d": "User research and interface design, from idea through polished UI, to create software products people actually want to use.",
+  "learn": "Learn more",
+  "s.custom": "Custom Software<br/>Development",
+  "s.custom.d": "Web and mobile applications built to last — designed to scale and easy to maintain.",
+  "s.eng": "Software Engineering",
+  "s.eng.d": "Full-stack engineering focused on architecture design and code quality.",
+  "s.qa": "Quality Assurance<br/>and Testing",
+  "s.qa.d": "Automated and manual testing pipelines that let you ship with confidence and catch regressions early.",
+  "group.ai": "AI &amp; Data Solutions",
+  "s.ai": "Custom AI &amp; Data<br/>Solutions",
+  "s.ai.d": "Machine learning, generative AI, and data solutions built to fit your business needs and integrated into your products and workflows.",
+  "s.aug": "Team Augmentation",
+  "s.aug.d": "Senior engineers and AI specialists ready to help solve problems in your systems or take on the work you need.",
+  "s.iso": "ISO/IEC 29110<br/>Certification",
+  "s.iso.d": "End-to-end consulting to prepare your team for the ISO/IEC 29110 audit — the international standard for very small entities (VSEs).",
+  "s.gap": "Process Assessment<br/>&amp; Gap Analysis",
+  "s.gap.d": "Gap analysis and readiness reviews against software engineering best practices, so you know exactly what to fix first.",
+  "title.team": "Team — buildbetter",
+  "team.intro": "We are software engineers, AI specialists, and ISO/IEC 29110 consultants. We have shipped real products and prepared many teams for audit.",
+  "t.sw": "Software Development Team",
+  "t.sw.d": "Our software development team has more than 10 years of experience.",
+  "t.ds": "Data Science Team",
+  "t.ds.d": "Our data science team has more than 8 years of experience in data analysis and research.",
+  "t.iso": "ISO/IEC 29110 Consultant Team",
+  "t.iso.d": "Our ISO/IEC 29110 consultant team has 5 years of experience and has prepared more than 30 companies for audit.",
+  "title.jobs": "Jobs — buildbetter",
+  "jobs.h1": "Join us and build <span class=\"grad\">better</span>.",
+  "jobs.lede": "We're a remote-first team of software engineers, AI specialists, and ISO/IEC&nbsp;29110 consultants. If you care about the craft of software, quality, and shipping things that last, we'd love to have you join us.",
+  "jobs.open": "Open positions",
+  "jobs.open.d": "All roles are remote-first unless noted otherwise. We review every application and reply within one week.",
+  "job.status": "Open",
+  "job.0": "buildbetter is hiring a highly capable, versatile AI / Data Science Engineer to own the full lifecycle of data-driven systems, from raw data pipelines to putting intelligent models into production.",
+  "job.1": "View job details",
+  "job.2": "About us",
+  "job.3": "buildbetter is a partner company of ProGaming and specializes in software development, AI applications, and AI solutions of many kinds. We are looking for a highly capable, versatile AI / Data Science Engineer to join the team.",
+  "job.4": "In this role, you will own the lifecycle of data-driven systems from end to end. You won't just build models in theory: you will build raw data pipelines and push intelligent models into production. If you enjoy the challenge of designing complex architectures and deploying AI applications in the real world, we'd love to work with you!",
+  "job.5": "Responsibilities",
+  "job.6": "<strong>Data Collection:</strong> Design, build, and maintain scalable, automated data collection pipelines from sources such as databases, APIs, system logs, and third-party integrations.",
+  "job.7": "<strong>Data Cleansing &amp; Preparation:</strong> Design preprocessing, parsing, and normalization processes, perform feature engineering, and handle missing or inconsistent data to create high-quality datasets.",
+  "job.8": "<strong>Modeling:</strong> Select, design, and train the machine learning, deep learning, or statistical models best suited to business problems and application features.",
+  "job.9": "<strong>Evaluation:</strong> Build rigorous evaluation frameworks and validate models against benchmarks for performance, accuracy, scalability, and bias before release.",
+  "job.10": "<strong>Deployment:</strong> Containerize, deploy, and scale AI models in production through microservices, REST/GraphQL APIs, and MLOps tools, ensuring smooth integration with our applications and games.",
+  "job.11": "<strong>Monitoring &amp; Optimization:</strong> Continuously monitor model drift and production performance, and set up automated retraining loops and optimization cycles.",
+  "job.12": "<strong>Collaboration:</strong> Work with software developers, product managers, and stakeholders to turn business goals into practical technical solutions.",
+  "job.13": "Qualifications",
+  "job.14": "Bachelor's or master's degree in computer science, data science, statistics, mathematics, or a related quantitative field.",
+  "job.15": "Hands-on experience across the full lifecycle of data pipeline management and machine learning development.",
+  "job.16": "Expertise in Python and its ecosystem (Pandas, NumPy, Scikit-Learn, SciPy).",
+  "job.17": "Deep understanding of major ML/DL frameworks (e.g. TensorFlow, PyTorch, Keras).",
+  "job.18": "Strong skills in SQL and database design (relational and NoSQL architectures).",
+  "job.19": "Experience with containerization and cloud architecture (Docker, Kubernetes, AWS, GCP, or Azure) for serving models at scale.",
+  "job.20": "Familiarity with MLOps concepts and CI/CD pipelines for machine learning is a plus.",
+  "job.21": "A strong problem-solving mindset, analytical skills, and a proactive, collaborative attitude.",
+  "job.22": "How to apply",
+  "job.23": "If you're ready to build the future of intelligent applications with us, please send your resume, portfolio, and expected salary to 📧 <a href=\"mailto:hr@buildbetter.cc\" style=\"font-weight:600;color:var(--accent-2);\">hr@buildbetter.cc</a>",
+  "apply": "Apply now",
+  "jobs.spec.t": "Don't see your role?",
+  "jobs.spec.d": "We're always happy to meet talented people. Send us your CV and a few lines about what you'd love to work on — we keep every application on file.",
+  "jobs.spec.b": "Send a speculative application"
 };
 
 (function(){
@@ -100,24 +100,24 @@ var I18N_TH = {
   var labels = document.querySelectorAll('[data-i18n-label]');
   var buttons = document.querySelectorAll('.lang-switch button');
   var i;
-  for(i = 0; i < texts.length; i++) texts[i].i18nEn = texts[i].innerHTML;
-  for(i = 0; i < labels.length; i++) labels[i].i18nEn = labels[i].getAttribute('aria-label');
+  for(i = 0; i < texts.length; i++) texts[i].i18nTh = texts[i].innerHTML;
+  for(i = 0; i < labels.length; i++) labels[i].i18nTh = labels[i].getAttribute('aria-label');
 
   function stored(){
     try { return localStorage.getItem(KEY); } catch(e) { return null; }
   }
   function apply(lang){
-    var th = lang === 'th';
+    var en = lang === 'en';
     var i, el, v;
-    document.documentElement.lang = th ? 'th' : 'en';
+    document.documentElement.lang = en ? 'en' : 'th';
     for(i = 0; i < texts.length; i++){
       el = texts[i];
-      v = th ? I18N_TH[el.getAttribute('data-i18n')] : el.i18nEn;
+      v = en ? I18N_EN[el.getAttribute('data-i18n')] : el.i18nTh;
       if(v !== undefined) el.innerHTML = v;
     }
     for(i = 0; i < labels.length; i++){
       el = labels[i];
-      v = th ? I18N_TH[el.getAttribute('data-i18n-label')] : el.i18nEn;
+      v = en ? I18N_EN[el.getAttribute('data-i18n-label')] : el.i18nTh;
       if(v !== undefined) el.setAttribute('aria-label', v);
     }
     for(i = 0; i < buttons.length; i++){
@@ -131,8 +131,6 @@ var I18N_TH = {
       apply(lang);
     });
   }
-  // saved choice wins; otherwise follow a Thai browser, else English
-  var saved = stored();
-  var browserThai = /^th\b/i.test(navigator.language || '');
-  apply(saved === 'th' || saved === 'en' ? saved : (browserThai ? 'th' : 'en'));
+  // Thai by default; only a saved choice of English changes it
+  if(stored() === 'en') apply('en');
 })();
