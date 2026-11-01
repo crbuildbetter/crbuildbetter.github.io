@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Jobs — buildbetter</title>
+<title data-i18n="title.jobs">Jobs — buildbetter</title>
 <link rel="icon" href="favicon.ico" sizes="48x48" />
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
@@ -185,6 +185,14 @@ footer{margin-top:30px;}
   .band{padding:36px 26px;}
   .foot{padding:40px 26px 30px;}
 }
+/* ---------- language ---------- */
+.lang-switch{display:flex;flex:none;border:1px solid var(--ink);border-radius:10px;overflow:hidden;}
+.lang-switch button{background:none;border:none;padding:10px 12px;font:inherit;font-size:15px;font-weight:500;line-height:1.5;color:var(--ink);cursor:pointer;}
+.lang-switch button[aria-pressed="true"]{background:var(--ink);color:#fff;}
+/* Thai needs room for vowels and tone marks, and no negative tracking */
+html[lang="th"] body{line-height:1.7;}
+html[lang="th"] h1,html[lang="th"] h2,html[lang="th"] h3,html[lang="th"] h4,
+html[lang="th"] .tag,html[lang="th"] .label,html[lang="th"] .m-title,html[lang="th"] .big{line-height:1.35;letter-spacing:0;}
 </style>
 </head>
 <body>
@@ -192,19 +200,23 @@ footer{margin-top:30px;}
 <!-- ===== HEADER ===== -->
 <header>
   <div class="wrap nav">
-    <a class="brand" href="index.html" aria-label="buildbetter home">
+    <a class="brand" href="index.html" aria-label="buildbetter home" data-i18n-label="label.home">
       <img src="assets/bb-mark-white.png" alt="buildbetter mark" />
       <span class="name">buildbetter</span>
     </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="services.html">Services</a></li>
-      <li><a href="team.html">Team</a></li>
-      <li><a href="jobs.html" class="active">Jobs</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+      <li><a href="team.html" data-i18n="nav.team">Team</a></li>
+      <li><a href="jobs.html" class="active" data-i18n="nav.jobs">Jobs</a></li>
+      <li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
     </ul>
     <div class="nav-cta">
-      <a href="index.html#contact" class="btn ghost">Contact us</a>
-      <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span></button>
+      <div class="lang-switch" role="group" aria-label="Language / ภาษา">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="th" aria-pressed="false">ไทย</button>
+      </div>
+      <a href="index.html#contact" class="btn ghost" data-i18n="cta.contact">Contact us</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu" data-i18n-label="label.menu"><span></span></button>
     </div>
   </div>
 </header>
@@ -214,8 +226,8 @@ footer{margin-top:30px;}
 <!-- ===== JOBS HERO ===== -->
 <section class="jobs-hero">
   <div class="wrap">
-    <h1>Join us and build <span class="grad">better</span>.</h1>
-    <p class="lede">We're a remote-first team of engineers, AI specialists, and ISO/IEC&nbsp;29110 consultants. If you care about craft, quality, and shipping things that last, we'd love to hear from you.</p>
+    <h1 data-i18n="jobs.h1">Join us and build <span class="grad">better</span>.</h1>
+    <p class="lede" data-i18n="jobs.lede">We're a remote-first team of engineers, AI specialists, and ISO/IEC&nbsp;29110 consultants. If you care about craft, quality, and shipping things that last, we'd love to hear from you.</p>
   </div>
 </section>
 
@@ -223,8 +235,8 @@ footer{margin-top:30px;}
 <section class="jobs-section" id="openings">
   <div class="wrap">
     <div class="sec-head">
-      <span class="tag">Open positions</span>
-      <p>All roles are remote-first unless noted otherwise. We review every application and reply within one week.</p>
+      <span class="tag" data-i18n="jobs.open">Open positions</span>
+      <p data-i18n="jobs.open.d">All roles are remote-first unless noted otherwise. We review every application and reply within one week.</p>
     </div>
     <div class="job-list">
 
@@ -232,53 +244,53 @@ footer{margin-top:30px;}
         <div class="job-top">
           <h3>AI / Data Science Engineer</h3>
           <div class="meta">
-            <span class="pill type">เปิดรับสมัคร</span>
+            <span class="pill type" data-i18n="job.status">Open</span>
             <span class="pill">AI</span>
             <span class="pill">Data Science</span>
           </div>
         </div>
-        <p class="desc">buildbetter กำลังเปิดรับสมัคร AI / Data Science Engineer ที่มีความสามารถสูงและพร้อมลุยงานรอบด้านมาร่วมทีม — ดูแลวงจรชีวิตของระบบที่ขับเคลื่อนด้วยข้อมูลตั้งแต่ต้นจนจบ ตั้งแต่ Pipeline ข้อมูลดิบไปจนถึงการนำโมเดลอัจฉริยะขึ้นสู่ Production</p>
+        <p class="desc" data-i18n="job.0">buildbetter is hiring a highly capable, versatile AI / Data Science Engineer to own the full lifecycle of data-driven systems, from raw data pipelines to putting intelligent models into production.</p>
         <details class="more">
-          <summary>ดูรายละเอียดตำแหน่งงาน</summary>
+          <summary data-i18n="job.1">View job details</summary>
           <div class="details-body">
             <div>
-              <h4>เกี่ยวกับเรา</h4>
-              <p style="margin-top:12px;">บริษัท buildbetter เป็นบริษัทคู่ค้าของ ProGaming ซึ่งเป็นผู้เชี่ยวชาญด้านการพัฒนาซอฟต์แวร์ AI application และ AI solution ในรูปแบบต่าง ๆ เรากำลังมองหา AI / Data Science Engineer ที่มีความสามารถสูงและพร้อมลุยงานรอบด้านมาร่วมทีม</p>
-              <p style="margin-top:12px;">ในบทบาทนี้ คุณจะได้เป็นผู้ดูแลวงจรชีวิตผลิตภัณฑ์ (Lifecycle) ของระบบที่ขับเคลื่อนด้วยข้อมูลตั้งแต่ต้นจนจบ คุณไม่ได้ทำแค่สร้างโมเดลในเชิงทฤษฎีเท่านั้น แต่จะได้สร้าง Pipeline ข้อมูลดิบและผลักดันโมเดลอัจฉริยะเข้าสู่สภาพแวดล้อมการใช้งานจริง (Production) หากคุณชอบความท้าทายในการออกแบบสถาปัตยกรรมที่ซับซ้อนและปรับใช้แอปพลิเคชัน AI ในโลกจริง เราอยากร่วมงานกับคุณ!</p>
+              <h4 data-i18n="job.2">About us</h4>
+              <p style="margin-top:12px;" data-i18n="job.3">buildbetter is a partner company of ProGaming and specializes in software development, AI applications, and AI solutions of many kinds. We are looking for a highly capable, versatile AI / Data Science Engineer to join the team.</p>
+              <p style="margin-top:12px;" data-i18n="job.4">In this role, you will own the lifecycle of data-driven systems from end to end. You won't just build models in theory: you will build raw data pipelines and push intelligent models into production. If you enjoy the challenge of designing complex architectures and deploying AI applications in the real world, we'd love to work with you!</p>
             </div>
             <div>
-              <h4>ความรับผิดชอบ</h4>
+              <h4 data-i18n="job.5">Responsibilities</h4>
               <ul style="margin-top:12px;">
-                <li><strong>Data Collection (การจัดเก็บข้อมูล):</strong> ออกแบบ สร้าง และดูแล Pipeline การเก็บรวบรวมข้อมูลแบบอัตโนมัติที่รองรับการขยายตัว (Scalable) จากแหล่งข้อมูลต่าง ๆ เช่น ฐานข้อมูล, API, System Logs และการเชื่อมต่อกับระบบภายนอก (Third-party Integrations)</li>
-                <li><strong>Data Cleansing &amp; Preparation (การทำความสะอาดและเตรียมข้อมูล):</strong> ออกแบบกระบวนการทำความสะอาดข้อมูล (Preprocessing) การแปลงข้อมูล (Parsing) และการทำให้ข้อมูลเป็นมาตรฐาน (Normalization) รวมถึงทำ Feature Engineering และจัดการกับข้อมูลที่ขาดหายหรือไม่สอดคล้องกัน เพื่อสร้างชุดข้อมูลที่มีคุณภาพสูง</li>
-                <li><strong>Modeling (การสร้างโมเดล):</strong> คัดเลือก ออกแบบ และฝึกฝน (Train) โมเดล Machine Learning, Deep Learning หรือโมเดลทางสถิติ ที่เหมาะสมที่สุดในการแก้โจทย์ทางธุรกิจและฟีเจอร์ของแอปพลิเคชัน</li>
-                <li><strong>Evaluation (การประเมินผล):</strong> สร้างกรอบการประเมินผลที่รัดกุม ตรวจสอบโมเดลกับเกณฑ์มาตรฐาน (Benchmarks) ทั้งในด้านประสิทธิภาพ (Performance) ความแม่นยำ (Accuracy) ความสามารถในการรองรับการขยายตัว (Scalability) และความลำเอียงของข้อมูล (Bias) ก่อนนำไปใช้งานจริง</li>
-                <li><strong>Deployment (การติดตั้งและเปิดใช้งาน):</strong> ทำ Containerization ปรับใช้ (Deploy) และขยายขนาดโมเดล AI สู่สภาพแวดล้อมการใช้งานจริง (Production) ผ่าน Microservices, REST/GraphQL APIs และเครื่องมือ MLOps เพื่อให้มั่นใจว่าสามารถผสานรวมกับแอปพลิเคชันและเกมของเราได้อย่างราบรื่น</li>
-                <li><strong>Monitoring &amp; Optimization (การติดตามและเพิ่มประสิทธิภาพ):</strong> ติดตามตรวจสอบ Model Drift และประสิทธิภาพในระบบจริงอย่างต่อเนื่อง พร้อมทั้งตั้งค่าลูปการฝึกฝนโมเดลซ้ำแบบอัตโนมัติ (Automated Retraining Loops) และรอบการปรับปรุงประสิทธิภาพ</li>
-                <li><strong>Collaboration (การทำงานร่วมกัน):</strong> ร่วมมือกับนักพัฒนาซอฟต์แวร์ (Software Developers) ผู้จัดการผลิตภัณฑ์ (Product Managers) และผู้มีส่วนเกี่ยวข้อง เพื่อเปลี่ยนเป้าหมายทางธุรกิจให้เป็นโซลูชันทางเทคนิคที่สามารถใช้งานได้จริง</li>
+                <li data-i18n="job.6"><strong>Data Collection:</strong> Design, build, and maintain scalable, automated data collection pipelines from sources such as databases, APIs, system logs, and third-party integrations.</li>
+                <li data-i18n="job.7"><strong>Data Cleansing &amp; Preparation:</strong> Design preprocessing, parsing, and normalization processes, perform feature engineering, and handle missing or inconsistent data to create high-quality datasets.</li>
+                <li data-i18n="job.8"><strong>Modeling:</strong> Select, design, and train the machine learning, deep learning, or statistical models best suited to business problems and application features.</li>
+                <li data-i18n="job.9"><strong>Evaluation:</strong> Build rigorous evaluation frameworks and validate models against benchmarks for performance, accuracy, scalability, and bias before release.</li>
+                <li data-i18n="job.10"><strong>Deployment:</strong> Containerize, deploy, and scale AI models in production through microservices, REST/GraphQL APIs, and MLOps tools, ensuring smooth integration with our applications and games.</li>
+                <li data-i18n="job.11"><strong>Monitoring &amp; Optimization:</strong> Continuously monitor model drift and production performance, and set up automated retraining loops and optimization cycles.</li>
+                <li data-i18n="job.12"><strong>Collaboration:</strong> Work with software developers, product managers, and stakeholders to turn business goals into practical technical solutions.</li>
               </ul>
             </div>
             <div>
-              <h4>คุณสมบัติ</h4>
+              <h4 data-i18n="job.13">Qualifications</h4>
               <ul style="margin-top:12px;">
-                <li>วุฒิการศึกษาระดับปริญญาตรีหรือปริญญาโท สาขาวิทยาการคอมพิวเตอร์ (Computer Science), วิทยาศาสตร์ข้อมูล (Data Science), สถิติ, คณิตศาสตร์ หรือสาขาเชิงปริมาณที่เกี่ยวข้อง</li>
-                <li>มีประสบการณ์ตรง (Hands-on Experience) ครอบคลุมวงจรชีวิตของการจัดการ Pipeline ข้อมูลและการพัฒนา Machine Learning ทั้งระบบ</li>
-                <li>มีความเชี่ยวชาญในภาษา Python และเครื่องมือในระบบนิเวศที่เกี่ยวข้อง (Pandas, NumPy, Scikit-Learn, SciPy)</li>
-                <li>เข้าใจอย่างลึกซึ้งในเฟรมเวิร์กหลักของ ML/DL (เช่น TensorFlow, PyTorch, Keras)</li>
-                <li>มีความสามารถที่แข็งแกร่งในด้าน SQL และการออกแบบฐานข้อมูล (สถาปัตยกรรม Relational และ NoSQL)</li>
-                <li>มีประสบการณ์เกี่ยวกับ Containerization และสถาปัตยกรรมคลาวด์ (Docker, Kubernetes, AWS, GCP หรือ Azure) สำหรับการให้บริการโมเดลในวงกว้าง</li>
-                <li>หากมีความคุ้นเคยกับแนวคิด MLOps และ CI/CD Pipelines สำหรับ Machine Learning จะพิจารณาเป็นพิเศษ</li>
-                <li>มีแนวคิดในการแก้ปัญหาที่ดี (Problem-solving Mindset) มีทักษะการวิเคราะห์ และมีทัศนคติเชิงรุกในการทำงานร่วมกันเป็นทีม</li>
+                <li data-i18n="job.14">Bachelor's or master's degree in computer science, data science, statistics, mathematics, or a related quantitative field.</li>
+                <li data-i18n="job.15">Hands-on experience across the full lifecycle of data pipeline management and machine learning development.</li>
+                <li data-i18n="job.16">Expertise in Python and its ecosystem (Pandas, NumPy, Scikit-Learn, SciPy).</li>
+                <li data-i18n="job.17">Deep understanding of major ML/DL frameworks (e.g. TensorFlow, PyTorch, Keras).</li>
+                <li data-i18n="job.18">Strong skills in SQL and database design (relational and NoSQL architectures).</li>
+                <li data-i18n="job.19">Experience with containerization and cloud architecture (Docker, Kubernetes, AWS, GCP, or Azure) for serving models at scale.</li>
+                <li data-i18n="job.20">Familiarity with MLOps concepts and CI/CD pipelines for machine learning is a plus.</li>
+                <li data-i18n="job.21">A strong problem-solving mindset, analytical skills, and a proactive, collaborative attitude.</li>
               </ul>
             </div>
             <div>
-              <h4>วิธีการสมัคร</h4>
-              <p style="margin-top:12px;">หากคุณพร้อมที่จะสร้างอนาคตของแอปพลิเคชันอัจฉริยะไปกับเรา กรุณาส่งประวัติการทำงาน (Resume) พอร์ตโฟลิโอผลงานที่ผ่านมา (Portfolio) และเงินเดือนที่คาดหวังมาที่ 📧 <a href="mailto:hr@buildbetter.cc" style="font-weight:600;color:var(--accent-2);">hr@buildbetter.cc</a></p>
+              <h4 data-i18n="job.22">How to apply</h4>
+              <p style="margin-top:12px;" data-i18n="job.23">If you're ready to build the future of intelligent applications with us, please send your resume, portfolio, and expected salary to 📧 <a href="mailto:hr@buildbetter.cc" style="font-weight:600;color:var(--accent-2);">hr@buildbetter.cc</a></p>
             </div>
           </div>
         </details>
         <div class="job-foot">
-          <a class="apply" href="mailto:hr@buildbetter.cc?subject=%E0%B8%AA%E0%B8%A1%E0%B8%B1%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%B2%E0%B8%99%3A%20AI%20%2F%20Data%20Science%20Engineer">Apply now <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
+          <a class="apply" href="mailto:hr@buildbetter.cc?subject=%E0%B8%AA%E0%B8%A1%E0%B8%B1%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%B2%E0%B8%99%3A%20AI%20%2F%20Data%20Science%20Engineer"><span data-i18n="apply">Apply now</span> <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
         </div>
       </article>
 
@@ -291,9 +303,9 @@ footer{margin-top:30px;}
   <div class="wrap">
     <div class="band">
       <svg class="star cstar" viewBox="0 0 24 24"><path d="M12 0c.7 6 5.3 10.6 12 12-6.7 1.4-11.3 6-12 12-.7-6-5.3-10.6-12-12C6.7 10.6 11.3 6 12 0z"/></svg>
-      <h3>Don't see your role?</h3>
-      <p>We're always happy to meet talented people. Send us your CV and a few lines about what you'd love to work on — we keep every application on file.</p>
-      <a href="mailto:hello@buildbetter.cc?subject=Speculative%20application" class="btn">Send a speculative application</a>
+      <h3 data-i18n="jobs.spec.t">Don't see your role?</h3>
+      <p data-i18n="jobs.spec.d">We're always happy to meet talented people. Send us your CV and a few lines about what you'd love to work on — we keep every application on file.</p>
+      <a href="mailto:hello@buildbetter.cc?subject=Speculative%20application" class="btn" data-i18n="jobs.spec.b">Send a speculative application</a>
     </div>
   </div>
 </section>
@@ -307,27 +319,27 @@ footer{margin-top:30px;}
       <div class="foot-top">
         <a class="brand" href="index.html"><img src="assets/bb-mark.png" alt="buildbetter mark" /><span class="name">buildbetter</span></a>
         <ul class="foot-nav">
-          <li><a href="services.html">Services</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="jobs.html">Jobs</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="jobs.html" data-i18n="nav.jobs">Jobs</a></li>
+          <li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </div>
       <div class="foot-mid">
         <div class="foot-contact">
-          <h4>Get in touch</h4>
+          <h4 data-i18n="foot.touch">Get in touch</h4>
           <p><a href="mailto:hello@buildbetter.cc">hello@buildbetter.cc</a></p>
           <p><a href="tel:+66891763372">+66 89 176 3372</a></p>
-          <p>Remote-first · Worldwide</p>
+          <p data-i18n="foot.remote">Remote-first · Worldwide</p>
           <div class="foot-logo"><img src="assets/bb-logo-full.png" alt="buildbetter — AI &amp; Software Development" /></div>
         </div>
       </div>
       <div class="foot-bottom">
         <div class="foot-legal">
-          <p>© 2026 buildbetter. All rights reserved.</p>
-          <p class="legal">Buildbetter Consulting Co., Ltd. (บริษัท บิลด์เบทเทอร์ คอนซัลติ้ง จำกัด)<br />
-            บริษัทจดทะเบียนนิติบุคคลกับกรมพัฒนาธุรกิจการค้า กระทรวงพาณิชย์ · Registered with the Department of Business Development, Ministry of Commerce, Thailand<br />
-            เลขทะเบียนนิติบุคคล / Company registration &amp; Tax ID: 0105569148417</p>
+          <p data-i18n="foot.rights">© 2026 buildbetter. All rights reserved.</p>
+          <p class="legal" data-i18n="foot.legal">Buildbetter Consulting Co., Ltd. (บริษัท บิลด์เบทเทอร์ คอนซัลติ้ง จำกัด)<br />
+            Registered with the Department of Business Development, Ministry of Commerce, Thailand<br />
+            Company registration &amp; Tax ID: 0105569148417</p>
         </div>
         <div class="socials">
           <a href="https://www.linkedin.com/company/buildbetter-th/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
@@ -338,6 +350,8 @@ footer{margin-top:30px;}
     </div>
   </div>
 </footer>
+
+<script src="assets/i18n.js"></script>
 
 <script>
   // mobile menu
