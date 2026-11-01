@@ -59,6 +59,7 @@ var I18N_EN = {
   "t.iso": "ISO/IEC 29110 Consultant Team",
   "t.iso.d": "Our ISO/IEC 29110 consultant team has 5 years of experience and has prepared more than 30 companies for audit.",
   "title.jobs": "Jobs — buildbetter",
+  "title.contact": "Contact — buildbetter",
   "jobs.h1": "Join us and build <span class=\"grad\">better</span>.",
   "jobs.lede": "We're a remote-first team of software engineers, AI specialists, and ISO/IEC&nbsp;29110 consultants. If you care about the craft of software, quality, and shipping things that last, we'd love to have you join us.",
   "jobs.open": "Open positions",

@@ -129,38 +129,6 @@ body.solid-head .hero h1 .grad{background:none;-webkit-text-fill-color:currentCo
 .band .art .markimg{position:absolute;width:120px;right:60px;top:40px;border-radius:18px;}
 .band .art .bigstar{position:absolute;color:var(--accent);font-size:60px;right:0;bottom:0;}
 
-/* ---------- contact ---------- */
-.contact-panel{
-  background:var(--tint);border-radius:var(--radius);
-  padding:56px 60px;position:relative;overflow:hidden;
-  display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start;
-}
-.contact-form{max-width:520px;}
-.radios{display:flex;gap:28px;margin-bottom:30px;}
-.radios label{display:flex;align-items:center;gap:10px;cursor:pointer;font-size:17px;}
-.radios input{appearance:none;width:20px;height:20px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;cursor:pointer;}
-.radios input::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--accent-2);transform:scale(0);transition:.15s;}
-.radios input:checked::after{transform:scale(1);}
-.field{margin-bottom:22px;}
-.field label{display:block;font-size:15px;margin-bottom:8px;font-weight:500;}
-.field input,.field textarea{
-  width:100%;font-family:inherit;font-size:16px;color:var(--ink);
-  background:#fff;border:1px solid var(--ink);border-radius:12px;padding:16px 18px;
-}
-.field input:focus,.field textarea:focus{outline:2px solid var(--accent-2);outline-offset:1px;}
-.field textarea{min-height:120px;resize:vertical;}
-.contact-form .btn{width:100%;justify-content:center;}
-.contact-aside{align-self:center;display:flex;flex-direction:column;gap:18px;padding-top:6px;}
-.contact-aside .row{display:flex;align-items:center;gap:14px;font-size:17px;}
-.contact-aside .row .ic{width:40px;height:40px;border-radius:11px;background:#fff;border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;flex:none;}
-.contact-aside .big{margin-top:8px;font-size:22px;font-weight:600;}
-.contact-intro .big{font-size:34px;font-weight:600;letter-spacing:-0.02em;}
-.contact-intro .big{margin-bottom:18px;}
-.contact-intro .contact-sub{color:var(--ink);font-size:18px;max-width:440px;margin-bottom:32px;}
-.contact-intro .cta-row{display:flex;gap:14px;flex-wrap:wrap;}
-.contact-panel .cstar{position:absolute;right:46px;top:46px;color:var(--accent);font-size:40px;}
-.formnote{display:none;margin-top:14px;font-size:15px;color:var(--accent-2);font-weight:500;}
-
 /* ---------- footer ---------- */
 footer{margin-top:30px;}
 .foot{background:var(--ink);color:#fff;border-radius:var(--radius) var(--radius) 0 0;padding:56px 60px 40px;}
@@ -202,8 +170,8 @@ footer{margin-top:30px;}
   .nav-cta .btn{display:none;}
   .hero-grid{grid-template-columns:1fr;gap:30px;}
   .hero h1{font-size:44px;}
-  .band,.contact-panel{grid-template-columns:1fr;}
-  .band .art,.contact-panel .cstar{display:none;}
+  .band{grid-template-columns:1fr;}
+  .band .art{display:none;}
   .foot-mid{grid-template-columns:1fr;}
   .sec-head h2,.sec-head .tag{font-size:34px;}
 }
@@ -211,7 +179,6 @@ footer{margin-top:30px;}
   body{font-size:16px;}
   .hero h1{font-size:36px;}
   .foot{padding:40px 26px 30px;}
-  .contact-panel{padding:36px 26px;}
 }
 /* ---------- language ---------- */
 .lang-switch{display:flex;flex:none;border:1px solid var(--ink);border-radius:10px;overflow:hidden;}
@@ -236,14 +203,14 @@ html[lang="th"] .tag,html[lang="th"] .label,html[lang="th"] .m-title,html[lang="
       <li><a href="services.html" data-i18n="nav.services">บริการ</a></li>
       <li><a href="team.html" data-i18n="nav.team">ทีมงาน</a></li>
       <li><a href="jobs.html" data-i18n="nav.jobs">ร่วมงานกับเรา</a></li>
-      <li><a href="#contact" data-i18n="nav.contact">ติดต่อ</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">ติดต่อ</a></li>
     </ul>
     <div class="nav-cta">
       <div class="lang-switch" role="group" aria-label="Language / ภาษา">
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
         <button type="button" data-lang="th" aria-pressed="true">ไทย</button>
       </div>
-      <a href="#contact" class="btn ghost" data-i18n="cta.contact">ติดต่อเรา</a>
+      <a href="contact.html" class="btn ghost" data-i18n="cta.contact">ติดต่อเรา</a>
       <button class="menu-btn" id="menuBtn" aria-label="เมนู" data-i18n-label="label.menu"><span></span></button>
     </div>
   </div>
@@ -258,7 +225,7 @@ html[lang="th"] .tag,html[lang="th"] .label,html[lang="th"] .m-title,html[lang="
       <h1 data-i18n="home.h1">สร้างซอฟต์แวร์ที่<span class="grad">ดีกว่า</span> AI ที่ฉลาดกว่า และบริษัทซอฟต์แวร์ที่ได้รับการรับรองมาตรฐาน</h1>
       <p class="lede" data-i18n="home.lede">เราออกแบบและส่งมอบซอฟต์แวร์และ AI ให้ทั้งธุรกิจขนาดเล็กและองค์กรขนาดใหญ่ พร้อมนำทีมของคุณสู่การรับรอง <strong>ISO/IEC&nbsp;29110</strong> ซึ่งเป็นมาตรฐานสากลด้านวิศวกรรมซอฟต์แวร์</p>
       <div class="cta-row">
-        <a href="#contact" class="btn" data-i18n="home.book">นัดปรึกษาฟรี</a>
+        <a href="contact.html" class="btn" data-i18n="home.book">นัดปรึกษาฟรี</a>
         <a href="services.html" class="btn ghost" data-i18n="home.explore">ดูบริการของเรา</a>
       </div>
     </div>
@@ -288,7 +255,7 @@ html[lang="th"] .tag,html[lang="th"] .label,html[lang="th"] .m-title,html[lang="
       <div class="band-copy">
         <h3 data-i18n="home.band.title">มาสร้างสิ่งที่ดีกว่าไปด้วยกัน</h3>
         <p data-i18n="home.band.text">นัดปรึกษาฟรี 30 นาที เราจะช่วยวางแผนงานด้านซอฟต์แวร์ AI หรือการรับรองมาตรฐานให้คุณ โดยไม่มีข้อผูกมัด</p>
-        <a href="#contact" class="btn" data-i18n="foot.touch">ติดต่อเรา</a>
+        <a href="contact.html" class="btn" data-i18n="foot.touch">ติดต่อเรา</a>
       </div>
       <div class="art" aria-hidden="true">
         <div class="ring r1"></div>
@@ -296,36 +263,6 @@ html[lang="th"] .tag,html[lang="th"] .label,html[lang="th"] .m-title,html[lang="
         <img class="markimg" src="assets/bb-mark.png" alt="" />
         <svg class="star bigstar" viewBox="0 0 24 24"><path d="M12 0c.7 6 5.3 10.6 12 12-6.7 1.4-11.3 6-12 12-.7-6-5.3-10.6-12-12C6.7 10.6 11.3 6 12 0z"/></svg>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CONTACT ===== -->
-<section id="contact">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="tag" data-i18n="nav.contact">ติดต่อ</span>
-      <p data-i18n="contact.intro">บอกเราว่าคุณกำลังสร้างอะไรอยู่ เราจะติดต่อกลับภายในหนึ่งวันทำการ</p>
-    </div>
-    <div class="contact-panel">
-      <svg class="star cstar" viewBox="0 0 24 24"><path d="M12 0c.7 6 5.3 10.6 12 12-6.7 1.4-11.3 6-12 12-.7-6-5.3-10.6-12-12C6.7 10.6 11.3 6 12 0z"/></svg>
-      <div class="contact-intro">
-        <div class="big" data-i18n="contact.big">มาคุยกันเรื่องโปรเจกต์ของคุณ</div>
-        <p class="contact-sub" data-i18n="contact.sub">ไม่ว่าจะเป็นเรื่องซอฟต์แวร์ AI หรือการรับรอง ISO/IEC 29110 ส่งข้อความหาเราได้เลย แล้วเราจะติดต่อกลับภายในหนึ่งวันทำการ</p>
-        <div class="cta-row">
-          <a class="btn" href="mailto:hello@buildbetter.cc" data-i18n="contact.email">ส่งอีเมลถึงเรา</a>
-          <a class="btn ghost" href="https://m.me/61590673354337" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.45 2.91h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg>
-            <span data-i18n="contact.fb">ส่งข้อความทาง Facebook</span>
-          </a>
-        </div>
-      </div>
-      <aside class="contact-aside">
-        <div class="row"><span class="ic">@</span> <a href="mailto:hello@buildbetter.cc">hello@buildbetter.cc</a></div>
-        <div class="row"><span class="ic">✆</span> <a href="tel:+66891763372">+66 89 176 3372</a></div>
-        <div class="row"><span class="ic">⌖</span> <span data-i18n="foot.remote">เน้นทำงานทางไกล · ทั่วโลก</span></div>
-        <p style="color:var(--muted);font-size:15px;margin-top:8px;" data-i18n="contact.hours">จันทร์–ศุกร์ 9:00–18:00 น. เราตอบทุกคำถาม แม้จะเป็นเรื่องเล็กน้อย</p>
-      </aside>
     </div>
   </div>
 </section>
@@ -342,7 +279,7 @@ html[lang="th"] .tag,html[lang="th"] .label,html[lang="th"] .m-title,html[lang="
           <li><a href="services.html" data-i18n="nav.services">บริการ</a></li>
           <li><a href="team.html" data-i18n="nav.team">ทีมงาน</a></li>
           <li><a href="jobs.html" data-i18n="nav.jobs">ร่วมงานกับเรา</a></li>
-          <li><a href="#contact" data-i18n="nav.contact">ติดต่อ</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">ติดต่อ</a></li>
         </ul>
       </div>
       <div class="foot-mid">

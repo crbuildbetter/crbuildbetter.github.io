@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title data-i18n="title.contact">ติดต่อ — buildbetter</title>
+<link rel="icon" href="favicon.ico" sizes="48x48" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --ink:#191A23;
+  --paper:#ffffff;
+  --tint:#F4F2FB;
+  --muted:#5b5c66;
+  --line:#191A23;
+  --accent:#C7B6FE;
+  --accent-2:#7C5CFC;
+  --grad:linear-gradient(135deg,#2E6BFF 0%,#7C3AED 52%,#D946EF 100%);
+  --radius:36px;
+  --radius-sm:18px;
+  --shadow:0 6px 0 0 var(--ink);
+  --maxw:1240px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"Space Grotesk","Noto Sans Thai",-apple-system,BlinkMacSystemFont,sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  font-size:18px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{margin:0;font-weight:600;line-height:1.04;letter-spacing:-0.02em;}
+p{margin:0;}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px;}
+.mono{font-family:"Space Mono",monospace;}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:.6em;
+  font-size:18px;font-weight:500;cursor:pointer;
+  padding:18px 32px;border-radius:14px;border:1px solid var(--ink);
+  background:var(--ink);color:#fff;transition:.18s ease;white-space:nowrap;
+}
+.btn:hover{background:var(--accent-2);border-color:var(--accent-2);}
+.btn.ghost{background:transparent;color:var(--ink);}
+.btn.ghost:hover{background:var(--ink);color:#fff;}
+.btn.accent{background:var(--accent);color:var(--ink);border-color:var(--accent);}
+.btn.accent:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
+
+/* star */
+.star{width:1em;height:1em;display:inline-block;flex:none;}
+.star path{fill:currentColor;}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:50;background:var(--paper);}
+.nav{display:flex;align-items:center;justify-content:space-between;height:96px;}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand img{width:42px;height:42px;border-radius:11px;}
+.brand .name{font-size:25px;font-weight:700;letter-spacing:-0.03em;}
+.nav-links{display:flex;align-items:center;gap:38px;list-style:none;margin:0;padding:0;}
+.nav-links a{font-size:18px;}
+.nav-links a:hover{color:var(--accent-2);}
+.nav-links a.active{font-weight:600;color:var(--accent-2);}
+.nav-cta{display:flex;align-items:center;gap:14px;}
+.menu-btn{display:none;background:none;border:1px solid var(--ink);border-radius:10px;width:46px;height:46px;cursor:pointer;align-items:center;justify-content:center;}
+.menu-btn span{display:block;width:20px;height:2px;background:var(--ink);position:relative;}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--ink);}
+.menu-btn span::before{top:-6px;}.menu-btn span::after{top:6px;}
+
+/* ---------- section header ---------- */
+section{padding:70px 0;}
+.sec-head{display:flex;align-items:center;gap:40px;margin-bottom:54px;flex-wrap:wrap;}
+.sec-head h2{font-size:40px;}
+.sec-head .tag{background:var(--accent);border-radius:8px;padding:2px 8px;font-size:40px;font-weight:600;}
+.sec-head p{max-width:560px;color:var(--ink);font-size:18px;}
+
+/* ---------- contact ---------- */
+.contact-section{padding-top:36px;}
+.contact-panel{
+  background:var(--tint);border-radius:var(--radius);
+  padding:56px 60px;position:relative;overflow:hidden;
+  display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start;
+}
+.contact-aside{align-self:center;display:flex;flex-direction:column;gap:18px;padding-top:6px;}
+.contact-aside .row{display:flex;align-items:center;gap:14px;font-size:17px;}
+.contact-aside .row .ic{width:40px;height:40px;border-radius:11px;background:#fff;border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;flex:none;}
+.contact-intro .big{font-size:34px;font-weight:600;letter-spacing:-0.02em;}
+.contact-intro .big{margin-bottom:18px;}
+.contact-intro .contact-sub{color:var(--ink);font-size:18px;max-width:440px;margin-bottom:32px;}
+.contact-intro .cta-row{display:flex;gap:14px;flex-wrap:wrap;}
+.contact-panel .cstar{position:absolute;right:46px;top:46px;color:var(--accent);font-size:40px;}
+
+/* ---------- footer ---------- */
+footer{margin-top:30px;}
+.foot{background:var(--ink);color:#fff;border-radius:var(--radius) var(--radius) 0 0;padding:56px 60px 40px;}
+.foot-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;align-items:flex-start;}
+.foot .brand .name{color:#fff;}
+.foot-nav{display:flex;gap:40px;list-style:none;margin:0;padding:0;}
+.foot-nav a{font-size:17px;}
+.foot-nav a:hover{color:var(--accent);text-decoration:underline;}
+.foot-mid{display:block;margin:44px 0 36px;}
+.foot-contact h4{font-size:18px;margin-bottom:18px;background:var(--accent);color:var(--ink);display:inline-block;border-radius:6px;padding:2px 8px;}
+.foot-contact p{font-size:16px;margin-bottom:8px;color:#e7e6ee;}
+.foot-contact p a:hover{color:var(--accent);}
+.foot-logo{margin-top:10px;}
+.foot-logo img{width:150px;border-radius:14px;}
+.foot-bottom{border-top:1px solid #3a3b46;padding-top:26px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;}
+.foot-bottom .socials{display:flex;gap:12px;}
+.foot-bottom .socials a{width:34px;height:34px;border-radius:50%;background:#fff;color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;}
+.foot-bottom .socials a:hover{background:var(--accent);}
+.foot-bottom p{font-size:15px;color:#cfced8;}
+.foot-bottom .foot-legal{max-width:640px;}
+.foot-bottom .legal{margin-top:8px;font-size:13px;color:#a3a2af;line-height:1.7;}
+
+/* ---------- responsive ---------- */
+@media (max-width:880px){
+  .wrap{padding:0 24px;}
+  .menu-btn{display:flex;}
+  .nav-links{position:absolute;top:96px;left:0;right:0;background:#fff;flex-direction:column;gap:0;border-top:1px solid #eee;box-shadow:0 20px 30px rgba(0,0,0,.08);display:none;}
+  .nav-links.open{display:flex;}
+  .nav-links li{width:100%;border-bottom:1px solid #f0eef8;}
+  .nav-links a{display:block;padding:18px 24px;}
+  .nav-cta .btn{display:none;}
+  .contact-panel{grid-template-columns:1fr;}
+  .contact-panel .cstar{display:none;}
+  .sec-head h2,.sec-head .tag{font-size:34px;}
+}
+@media (max-width:480px){
+  body{font-size:16px;}
+  .contact-panel{padding:36px 26px;}
+  .foot{padding:40px 26px 30px;}
+}
+/* ---------- language ---------- */
+.lang-switch{display:flex;flex:none;border:1px solid var(--ink);border-radius:10px;overflow:hidden;}
+.lang-switch button{background:none;border:none;padding:10px 12px;font:inherit;font-size:15px;font-weight:500;line-height:1.5;color:var(--ink);cursor:pointer;}
+.lang-switch button[aria-pressed="true"]{background:var(--ink);color:#fff;}
+/* Thai needs room for vowels and tone marks, and no negative tracking */
+html[lang="th"] body{line-height:1.7;}
+html[lang="th"] h1,html[lang="th"] h2,html[lang="th"] h3,html[lang="th"] h4,
+html[lang="th"] .tag,html[lang="th"] .label,html[lang="th"] .m-title,html[lang="th"] .big{line-height:1.35;letter-spacing:0;}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="หน้าแรก buildbetter" data-i18n-label="label.home">
+      <img src="assets/bb-mark-white.png" alt="buildbetter mark" />
+      <span class="name">buildbetter</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="services.html" data-i18n="nav.services">บริการ</a></li>
+      <li><a href="team.html" data-i18n="nav.team">ทีมงาน</a></li>
+      <li><a href="jobs.html" data-i18n="nav.jobs">ร่วมงานกับเรา</a></li>
+      <li><a href="contact.html" class="active" data-i18n="nav.contact">ติดต่อ</a></li>
+    </ul>
+    <div class="nav-cta">
+      <div class="lang-switch" role="group" aria-label="Language / ภาษา">
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="th" aria-pressed="true">ไทย</button>
+      </div>
+      <a href="contact.html" class="btn ghost" data-i18n="cta.contact">ติดต่อเรา</a>
+      <button class="menu-btn" id="menuBtn" aria-label="เมนู" data-i18n-label="label.menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="contact-section">
+  <div class="wrap">
+    <div class="sec-head">
+      <h1 class="tag" data-i18n="nav.contact">ติดต่อ</h1>
+      <p data-i18n="contact.intro">บอกเราว่าคุณกำลังสร้างอะไรอยู่ เราจะติดต่อกลับภายในหนึ่งวันทำการ</p>
+    </div>
+    <div class="contact-panel">
+      <svg class="star cstar" viewBox="0 0 24 24"><path d="M12 0c.7 6 5.3 10.6 12 12-6.7 1.4-11.3 6-12 12-.7-6-5.3-10.6-12-12C6.7 10.6 11.3 6 12 0z"/></svg>
+      <div class="contact-intro">
+        <div class="big" data-i18n="contact.big">มาคุยกันเรื่องโปรเจกต์ของคุณ</div>
+        <p class="contact-sub" data-i18n="contact.sub">ไม่ว่าจะเป็นเรื่องซอฟต์แวร์ AI หรือการรับรอง ISO/IEC 29110 ส่งข้อความหาเราได้เลย แล้วเราจะติดต่อกลับภายในหนึ่งวันทำการ</p>
+        <div class="cta-row">
+          <a class="btn" href="mailto:hello@buildbetter.cc" data-i18n="contact.email">ส่งอีเมลถึงเรา</a>
+          <a class="btn ghost" href="https://m.me/61590673354337" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.45 2.91h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg>
+            <span data-i18n="contact.fb">ส่งข้อความทาง Facebook</span>
+          </a>
+        </div>
+      </div>
+      <aside class="contact-aside">
+        <div class="row"><span class="ic">@</span> <a href="mailto:hello@buildbetter.cc">hello@buildbetter.cc</a></div>
+        <div class="row"><span class="ic">✆</span> <a href="tel:+66891763372">+66 89 176 3372</a></div>
+        <div class="row"><span class="ic">⌖</span> <span data-i18n="foot.remote">เน้นทำงานทางไกล · ทั่วโลก</span></div>
+        <p style="color:var(--muted);font-size:15px;margin-top:8px;" data-i18n="contact.hours">จันทร์–ศุกร์ 9:00–18:00 น. เราตอบทุกคำถาม แม้จะเป็นเรื่องเล็กน้อย</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="foot-top">
+        <a class="brand" href="index.html"><img src="assets/bb-mark.png" alt="buildbetter mark" /><span class="name">buildbetter</span></a>
+        <ul class="foot-nav">
+          <li><a href="services.html" data-i18n="nav.services">บริการ</a></li>
+          <li><a href="team.html" data-i18n="nav.team">ทีมงาน</a></li>
+          <li><a href="jobs.html" data-i18n="nav.jobs">ร่วมงานกับเรา</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">ติดต่อ</a></li>
+        </ul>
+      </div>
+      <div class="foot-mid">
+        <div class="foot-contact">
+          <h4 data-i18n="foot.touch">ติดต่อเรา</h4>
+          <p><a href="mailto:hello@buildbetter.cc">hello@buildbetter.cc</a></p>
+          <p><a href="tel:+66891763372">+66 89 176 3372</a></p>
+          <p data-i18n="foot.remote">เน้นทำงานทางไกล · ทั่วโลก</p>
+          <div class="foot-logo"><img src="assets/bb-logo-full.png" alt="buildbetter — AI &amp; Software Development" /></div>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <div class="foot-legal">
+          <p data-i18n="foot.rights">© 2026 buildbetter สงวนลิขสิทธิ์</p>
+          <p class="legal" data-i18n="foot.legal">บริษัท บิลด์เบทเทอร์ คอนซัลติ้ง จำกัด (Buildbetter Consulting Co., Ltd.)<br />
+            จดทะเบียนนิติบุคคลกับกรมพัฒนาธุรกิจการค้า กระทรวงพาณิชย์<br />
+            เลขทะเบียนนิติบุคคล / เลขประจำตัวผู้เสียภาษี: 0105569148417</p>
+        </div>
+        <div class="socials">
+          <a href="https://www.linkedin.com/company/buildbetter-th/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="https://www.facebook.com/profile.php?id=61590673354337" target="_blank" rel="noopener" aria-label="Facebook">fb</a>
+          <a href="https://github.com/crbuildbetter" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/i18n.js"></script>
+
+<script>
+  // mobile menu
+  var mb = document.getElementById('menuBtn');
+  var nl = document.getElementById('navLinks');
+  mb.addEventListener('click', function(){ nl.classList.toggle('open'); });
+  nl.addEventListener('click', function(e){ if(e.target.tagName === 'A') nl.classList.remove('open'); });
+</script>
+
+</body>
+</html>
