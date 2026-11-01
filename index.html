@@ -4,6 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>buildbetter — Software, AI &amp; Certification</title>
+<link rel="icon" href="favicon.ico" sizes="48x48" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
@@ -110,36 +113,6 @@ body.solid-head .hero h1 .grad{background:none;-webkit-text-fill-color:currentCo
 .proof .item{display:flex;align-items:center;gap:12px;font-size:17px;font-weight:500;}
 .proof .item .star{color:var(--accent-2);font-size:20px;}
 
-/* ---------- services ---------- */
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:38px;}
-.card{
-  border:1px solid var(--ink);border-radius:var(--radius);
-  padding:46px;box-shadow:var(--shadow);
-  display:flex;flex-direction:column;gap:18px;min-height:300px;
-  background:var(--paper);transition:transform .18s ease;
-}
-.card:hover{transform:translateY(-4px);}
-.card.tint{background:var(--accent);}
-.card.dark{background:var(--ink);color:#fff;}
-.card .label{align-self:flex-start;background:var(--accent);color:var(--ink);border-radius:7px;padding:2px 8px;font-size:26px;font-weight:600;line-height:1.18;}
-.card.tint .label{background:#fff;}
-.card.dark .label{background:var(--accent);}
-.card .desc{font-size:17px;color:inherit;opacity:.92;}
-.card.dark .desc{opacity:.8;}
-.card .spacer{flex:1;}
-.card .learn{display:inline-flex;align-items:center;gap:14px;font-size:18px;font-weight:500;cursor:pointer;}
-.card .arrow{width:42px;height:42px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;flex:none;transition:.18s;}
-.card.dark .arrow{background:var(--accent);}
-.card .arrow svg{width:18px;height:18px;}
-.card .arrow svg path{stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;}
-.card.dark .arrow svg path{stroke:var(--ink);}
-.card .learn:hover .arrow{background:var(--accent-2);}
-.card .deco{position:absolute;}
-.card{position:relative;overflow:hidden;}
-.card .blob{position:absolute;right:-30px;bottom:-30px;width:150px;height:150px;border-radius:50%;background:var(--grad);opacity:.16;filter:blur(2px);}
-.card.dark .blob{opacity:.5;}
-.card.tint .blob{opacity:.28;}
-
 /* ---------- CTA banner ---------- */
 .cta-band .wrap{padding-top:0;padding-bottom:0;}
 .band{
@@ -155,28 +128,6 @@ body.solid-head .hero h1 .grad{background:none;-webkit-text-fill-color:currentCo
 .band .art .r2{width:140px;height:140px;right:60px;top:30px;opacity:.4;}
 .band .art .markimg{position:absolute;width:120px;right:60px;top:40px;border-radius:18px;}
 .band .art .bigstar{position:absolute;color:var(--accent);font-size:60px;right:0;bottom:0;}
-
-/* ---------- team ---------- */
-.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
-.member{
-  border:1px solid var(--ink);border-radius:var(--radius-sm);
-  box-shadow:var(--shadow);padding:30px;background:var(--paper);
-  display:flex;flex-direction:column;gap:14px;
-}
-.member .top{display:flex;align-items:flex-end;gap:18px;}
-.ph{
-  width:84px;height:84px;border-radius:50%;flex:none;
-  background:
-    repeating-linear-gradient(45deg,#e9e5f7 0 8px,#f4f1fc 8px 16px);
-  border:1px solid var(--ink);position:relative;overflow:hidden;
-}
-.ph::after{content:"photo";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:"Space Mono",monospace;font-size:11px;color:#9a93b8;}
-.member .lk{margin-left:auto;width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;align-self:flex-start;}
-.member .nm{font-size:21px;font-weight:600;}
-.member .m-title{font-size:22px;font-weight:600;letter-spacing:-0.01em;line-height:1.15;}
-.member .role{font-size:15px;color:var(--accent-2);font-weight:500;margin-top:-8px;}
-.member hr{border:none;border-top:1px solid #e0dcef;margin:4px 0;}
-.member .bio{font-size:15px;color:var(--muted);}
 
 /* ---------- contact ---------- */
 .contact-panel{
@@ -240,7 +191,6 @@ footer{margin-top:30px;}
 /* ---------- responsive ---------- */
 @media (max-width:1080px){
   .hero h1{font-size:50px;}
-  .team-grid{grid-template-columns:1fr 1fr;}
 }
 @media (max-width:880px){
   .wrap{padding:0 24px;}
@@ -252,17 +202,14 @@ footer{margin-top:30px;}
   .nav-cta .btn{display:none;}
   .hero-grid{grid-template-columns:1fr;gap:30px;}
   .hero h1{font-size:44px;}
-  .cards{grid-template-columns:1fr;}
   .band,.contact-panel{grid-template-columns:1fr;}
   .band .art,.contact-panel .cstar{display:none;}
-  .team-grid{grid-template-columns:1fr;}
   .foot-mid{grid-template-columns:1fr;}
   .sec-head h2,.sec-head .tag{font-size:34px;}
 }
 @media (max-width:480px){
   body{font-size:16px;}
   .hero h1{font-size:36px;}
-  .card{padding:32px;}
   .foot{padding:40px 26px 30px;}
   .contact-panel{padding:36px 26px;}
 }
@@ -278,8 +225,8 @@ footer{margin-top:30px;}
       <span class="name">buildbetter</span>
     </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#team">Team</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="team.html">Team</a></li>
       <li><a href="jobs.html">Jobs</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -300,7 +247,7 @@ footer{margin-top:30px;}
       <p class="lede">We design and ship software and AI for small businesses and enterprises — and guide your team to <strong>ISO/IEC&nbsp;29110</strong> certification, the international standard for software engineering.</p>
       <div class="cta-row">
         <a href="#contact" class="btn">Book a free consultation</a>
-        <a href="#services" class="btn ghost">Explore services</a>
+        <a href="services.html" class="btn ghost">Explore services</a>
       </div>
     </div>
     <div class="hero-visual" aria-hidden="true">
@@ -322,67 +269,6 @@ footer{margin-top:30px;}
   </div>
 </div>
 
-<!-- ===== SERVICES ===== -->
-<section id="services">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="tag">Services</span>
-      <p>From the first line of code to formal certification, we cover the full lifecycle of building better software.</p>
-    </div>
-    <div class="cards">
-
-      <article class="card">
-        <span class="label">Custom Software<br/>Development</span>
-        <p class="desc">Web, mobile, and cloud applications built to last — architected for reliability, scale, and maintainability.</p>
-        <div class="spacer"></div>
-        <a class="learn" href="#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
-        <div class="blob"></div>
-      </article>
-
-      <article class="card tint">
-        <span class="label">AI Solutions</span>
-        <p class="desc">Practical machine learning and generative AI integrated into your products and workflows — not science projects.</p>
-        <div class="spacer"></div>
-        <a class="learn" href="#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
-        <div class="blob"></div>
-      </article>
-
-      <article class="card dark">
-        <span class="label">ISO/IEC 29110<br/>Certification</span>
-        <p class="desc">End-to-end consulting to prepare your team for the ISO/IEC 29110 audit — the international standard for very small entities (VSEs).</p>
-        <div class="spacer"></div>
-        <a class="learn" href="#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
-        <div class="blob"></div>
-      </article>
-
-      <article class="card">
-        <span class="label">Process Assessment<br/>&amp; Gap Analysis</span>
-        <p class="desc">Gap analysis and readiness reviews against engineering best practices, so you know exactly what to fix first.</p>
-        <div class="spacer"></div>
-        <a class="learn" href="#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
-        <div class="blob"></div>
-      </article>
-
-      <article class="card tint">
-        <span class="label">Quality Assurance<br/>&amp; Testing</span>
-        <p class="desc">Automated and manual testing pipelines that let you ship with confidence and catch regressions early.</p>
-        <div class="spacer"></div>
-        <a class="learn" href="#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
-        <div class="blob"></div>
-      </article>
-
-      <article class="card dark">
-        <span class="label">Team Augmentation</span>
-        <p class="desc">Senior engineers and AI specialists who plug straight into your team, exactly when and where you need them.</p>
-        <div class="spacer"></div>
-        <a class="learn" href="#contact">Learn more <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9"/></svg></span></a>
-        <div class="blob"></div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
 <!-- ===== CTA BANNER ===== -->
 <section class="cta-band">
   <div class="wrap">
@@ -398,55 +284,6 @@ footer{margin-top:30px;}
         <img class="markimg" src="assets/bb-mark.png" alt="" />
         <svg class="star bigstar" viewBox="0 0 24 24"><path d="M12 0c.7 6 5.3 10.6 12 12-6.7 1.4-11.3 6-12 12-.7-6-5.3-10.6-12-12C6.7 10.6 11.3 6 12 0z"/></svg>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== TEAM ===== -->
-<section id="team">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="tag">Team</span>
-      <p>Engineers, AI specialists, and certified ISO/IEC 29110 consultants who have shipped real products and prepared teams for audit.</p>
-    </div>
-    <div class="team-grid">
-
-      <article class="member">
-        <div class="m-title">Custom Software Development</div>
-        <hr/>
-        <p class="bio">15+ years building software for startups and enterprises — architecture, delivery, and everything in between.</p>
-      </article>
-
-      <article class="member">
-        <div class="m-title">AI &amp; Machine Learning</div>
-        <hr/>
-        <p class="bio">Takes AI from notebook to production — recommendation, vision, and generative systems.</p>
-      </article>
-
-      <article class="member">
-        <div class="m-title">ISO/IEC 29110 Readiness</div>
-        <hr/>
-        <p class="bio">Certified consultants who prepare your team for the ISO/IEC 29110 audit — pragmatic, audit-ready guidance for VSEs.</p>
-      </article>
-
-      <article class="member">
-        <div class="m-title">Software Engineering</div>
-        <hr/>
-        <p class="bio">Full-stack engineers focused on clean code, testing, and developer experience.</p>
-      </article>
-
-      <article class="member">
-        <div class="m-title">Quality Assurance &amp; Testing</div>
-        <hr/>
-        <p class="bio">Builds the automated pipelines and quality gates that keep every release dependable.</p>
-      </article>
-
-      <article class="member">
-        <div class="m-title">Product Design</div>
-        <hr/>
-        <p class="bio">Designs interfaces people actually want to use — from research through polished UI.</p>
-      </article>
-
     </div>
   </div>
 </section>
@@ -490,8 +327,8 @@ footer{margin-top:30px;}
       <div class="foot-top">
         <a class="brand" href="#top"><img src="assets/bb-mark.png" alt="buildbetter mark" /><span class="name">buildbetter</span></a>
         <ul class="foot-nav">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#team">Team</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="team.html">Team</a></li>
           <li><a href="jobs.html">Jobs</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
