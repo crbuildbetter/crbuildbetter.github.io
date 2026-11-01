@@ -90,7 +90,7 @@ var I18N_EN = {
   "job.23": "If you're ready to build the future of intelligent applications with us, please send your resume, portfolio, and expected salary to 📧 <a href=\"mailto:hr@buildbetter.cc\" style=\"font-weight:600;color:var(--accent-2);\">hr@buildbetter.cc</a>",
   "apply": "Apply now",
   "jobs.spec.t": "Don't see your role?",
-  "jobs.spec.d": "We're always happy to meet talented people. Send us your CV and a few lines about what you'd love to work on — we keep every application on file.",
+  "jobs.spec.d": "We're always happy to meet talented people. Send us your CV and a few lines about what you'd love to work on — we'll reach out when we're ready.",
   "jobs.spec.b": "Send a speculative application"
 };
 
