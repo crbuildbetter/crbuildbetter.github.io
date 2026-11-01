@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>buildbetter — Software, AI &amp; Certification</title>
+<title data-i18n="title.index">buildbetter — Software, AI &amp; Certification</title>
 <link rel="icon" href="favicon.ico" sizes="48x48" />
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
 :root{
   --ink:#191A23;
@@ -34,7 +34,7 @@
 html{scroll-behavior:smooth;}
 body{
   margin:0;
-  font-family:"Space Grotesk",-apple-system,BlinkMacSystemFont,sans-serif;
+  font-family:"Space Grotesk","Noto Sans Thai",-apple-system,BlinkMacSystemFont,sans-serif;
   color:var(--ink);
   background:var(--paper);
   font-size:18px;
@@ -213,6 +213,14 @@ footer{margin-top:30px;}
   .foot{padding:40px 26px 30px;}
   .contact-panel{padding:36px 26px;}
 }
+/* ---------- language ---------- */
+.lang-switch{display:flex;flex:none;border:1px solid var(--ink);border-radius:10px;overflow:hidden;}
+.lang-switch button{background:none;border:none;padding:10px 12px;font:inherit;font-size:15px;font-weight:500;line-height:1.5;color:var(--ink);cursor:pointer;}
+.lang-switch button[aria-pressed="true"]{background:var(--ink);color:#fff;}
+/* Thai needs room for vowels and tone marks, and no negative tracking */
+html[lang="th"] body{line-height:1.7;}
+html[lang="th"] h1,html[lang="th"] h2,html[lang="th"] h3,html[lang="th"] h4,
+html[lang="th"] .tag,html[lang="th"] .label,html[lang="th"] .m-title,html[lang="th"] .big{line-height:1.35;letter-spacing:0;}
 </style>
 </head>
 <body>
@@ -220,19 +228,23 @@ footer{margin-top:30px;}
 <!-- ===== HEADER ===== -->
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="buildbetter home">
+    <a class="brand" href="#top" aria-label="buildbetter home" data-i18n-label="label.home">
       <img src="assets/bb-mark-white.png" alt="buildbetter mark" />
       <span class="name">buildbetter</span>
     </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="services.html">Services</a></li>
-      <li><a href="team.html">Team</a></li>
-      <li><a href="jobs.html">Jobs</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+      <li><a href="team.html" data-i18n="nav.team">Team</a></li>
+      <li><a href="jobs.html" data-i18n="nav.jobs">Jobs</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
     </ul>
     <div class="nav-cta">
-      <a href="#contact" class="btn ghost">Contact us</a>
-      <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span></button>
+      <div class="lang-switch" role="group" aria-label="Language / ภาษา">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="th" aria-pressed="false">ไทย</button>
+      </div>
+      <a href="#contact" class="btn ghost" data-i18n="cta.contact">Contact us</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu" data-i18n-label="label.menu"><span></span></button>
     </div>
   </div>
 </header>
@@ -243,19 +255,19 @@ footer{margin-top:30px;}
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <h1>Build <span class="grad">better</span> software, smarter AI, certified standards.</h1>
-      <p class="lede">We design and ship software and AI for small businesses and enterprises — and guide your team to <strong>ISO/IEC&nbsp;29110</strong> certification, the international standard for software engineering.</p>
+      <h1 data-i18n="home.h1">Build <span class="grad">better</span> software, smarter AI, certified standards.</h1>
+      <p class="lede" data-i18n="home.lede">We design and ship software and AI for small businesses and enterprises — and guide your team to <strong>ISO/IEC&nbsp;29110</strong> certification, the international standard for software engineering.</p>
       <div class="cta-row">
-        <a href="#contact" class="btn">Book a free consultation</a>
-        <a href="services.html" class="btn ghost">Explore services</a>
+        <a href="#contact" class="btn" data-i18n="home.book">Book a free consultation</a>
+        <a href="services.html" class="btn ghost" data-i18n="home.explore">Explore services</a>
       </div>
     </div>
     <div class="hero-visual" aria-hidden="true">
       <div class="glow"></div>
       <img class="markimg" src="assets/bb-mark.png" alt="" />
       <svg class="star floatstar" viewBox="0 0 24 24"><path d="M12 0c.7 6 5.3 10.6 12 12-6.7 1.4-11.3 6-12 12-.7-6-5.3-10.6-12-12C6.7 10.6 11.3 6 12 0z"/></svg>
-      <div class="chip c1"><span class="dot"></span> AI &amp; Software Development</div>
-      <div class="chip c2"><span class="dot"></span> ISO/IEC 29110 ready</div>
+      <div class="chip c1"><span class="dot"></span> <span data-i18n="home.chip1">AI &amp; Software Development</span></div>
+      <div class="chip c2"><span class="dot"></span> <span data-i18n="home.chip2">ISO/IEC 29110 ready</span></div>
     </div>
   </div>
 </section>
@@ -263,9 +275,9 @@ footer{margin-top:30px;}
 <!-- ===== PROOF STRIP ===== -->
 <div class="proof">
   <div class="wrap">
-    <div class="item"><svg class="star" viewBox="0 0 24 24"><path d="M12 0c.7 6 5.3 10.6 12 12-6.7 1.4-11.3 6-12 12-.7-6-5.3-10.6-12-12C6.7 10.6 11.3 6 12 0z"/></svg> Certified ISO/IEC 29110 consultants</div>
-    <div class="item"><svg class="star" viewBox="0 0 24 24"><path d="M12 0c.7 6 5.3 10.6 12 12-6.7 1.4-11.3 6-12 12-.7-6-5.3-10.6-12-12C6.7 10.6 11.3 6 12 0z"/></svg> AI from prototype to production</div>
-    <div class="item"><svg class="star" viewBox="0 0 24 24"><path d="M12 0c.7 6 5.3 10.6 12 12-6.7 1.4-11.3 6-12 12-.7-6-5.3-10.6-12-12C6.7 10.6 11.3 6 12 0z"/></svg> Small business to enterprise</div>
+    <div class="item"><svg class="star" viewBox="0 0 24 24"><path d="M12 0c.7 6 5.3 10.6 12 12-6.7 1.4-11.3 6-12 12-.7-6-5.3-10.6-12-12C6.7 10.6 11.3 6 12 0z"/></svg> <span data-i18n="home.proof1">Certified ISO/IEC 29110 consultants</span></div>
+    <div class="item"><svg class="star" viewBox="0 0 24 24"><path d="M12 0c.7 6 5.3 10.6 12 12-6.7 1.4-11.3 6-12 12-.7-6-5.3-10.6-12-12C6.7 10.6 11.3 6 12 0z"/></svg> <span data-i18n="home.proof2">AI from prototype to production</span></div>
+    <div class="item"><svg class="star" viewBox="0 0 24 24"><path d="M12 0c.7 6 5.3 10.6 12 12-6.7 1.4-11.3 6-12 12-.7-6-5.3-10.6-12-12C6.7 10.6 11.3 6 12 0z"/></svg> <span data-i18n="home.proof3">Small business to enterprise</span></div>
   </div>
 </div>
 
@@ -274,9 +286,9 @@ footer{margin-top:30px;}
   <div class="wrap">
     <div class="band">
       <div class="band-copy">
-        <h3>Let's build something better.</h3>
-        <p>Book a free 30-minute consultation. We'll map out your software, AI, or certification roadmap — no strings attached.</p>
-        <a href="#contact" class="btn">Get in touch</a>
+        <h3 data-i18n="home.band.title">Let's build something better.</h3>
+        <p data-i18n="home.band.text">Book a free 30-minute consultation. We'll map out your software, AI, or certification roadmap — no strings attached.</p>
+        <a href="#contact" class="btn" data-i18n="foot.touch">Get in touch</a>
       </div>
       <div class="art" aria-hidden="true">
         <div class="ring r1"></div>
@@ -292,27 +304,27 @@ footer{margin-top:30px;}
 <section id="contact">
   <div class="wrap">
     <div class="sec-head">
-      <span class="tag">Contact</span>
-      <p>Tell us what you're building. We'll get back to you within one business day.</p>
+      <span class="tag" data-i18n="nav.contact">Contact</span>
+      <p data-i18n="contact.intro">Tell us what you're building. We'll get back to you within one business day.</p>
     </div>
     <div class="contact-panel">
       <svg class="star cstar" viewBox="0 0 24 24"><path d="M12 0c.7 6 5.3 10.6 12 12-6.7 1.4-11.3 6-12 12-.7-6-5.3-10.6-12-12C6.7 10.6 11.3 6 12 0z"/></svg>
       <div class="contact-intro">
-        <div class="big">Let's talk about your project.</div>
-        <p class="contact-sub">Whether it's software, AI, or ISO/IEC 29110 certification, send us a note and we'll get back to you within one business day.</p>
+        <div class="big" data-i18n="contact.big">Let's talk about your project.</div>
+        <p class="contact-sub" data-i18n="contact.sub">Whether it's software, AI, or ISO/IEC 29110 certification, send us a note and we'll get back to you within one business day.</p>
         <div class="cta-row">
-          <a class="btn" href="mailto:hello@buildbetter.cc">Email us</a>
+          <a class="btn" href="mailto:hello@buildbetter.cc" data-i18n="contact.email">Email us</a>
           <a class="btn ghost" href="https://m.me/61590673354337" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.45 2.91h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg>
-            Message us on Facebook
+            <span data-i18n="contact.fb">Message us on Facebook</span>
           </a>
         </div>
       </div>
       <aside class="contact-aside">
         <div class="row"><span class="ic">@</span> <a href="mailto:hello@buildbetter.cc">hello@buildbetter.cc</a></div>
         <div class="row"><span class="ic">✆</span> <a href="tel:+66891763372">+66 89 176 3372</a></div>
-        <div class="row"><span class="ic">⌖</span> Remote-first · Worldwide</div>
-        <p style="color:var(--muted);font-size:15px;margin-top:8px;">Mon–Fri, 9am–6pm. We reply to every enquiry — even the small ones.</p>
+        <div class="row"><span class="ic">⌖</span> <span data-i18n="foot.remote">Remote-first · Worldwide</span></div>
+        <p style="color:var(--muted);font-size:15px;margin-top:8px;" data-i18n="contact.hours">Mon–Fri, 9am–6pm. We reply to every enquiry — even the small ones.</p>
       </aside>
     </div>
   </div>
@@ -327,25 +339,25 @@ footer{margin-top:30px;}
       <div class="foot-top">
         <a class="brand" href="#top"><img src="assets/bb-mark.png" alt="buildbetter mark" /><span class="name">buildbetter</span></a>
         <ul class="foot-nav">
-          <li><a href="services.html">Services</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="jobs.html">Jobs</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="team.html" data-i18n="nav.team">Team</a></li>
+          <li><a href="jobs.html" data-i18n="nav.jobs">Jobs</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </div>
       <div class="foot-mid">
         <div class="foot-contact">
-          <h4>Get in touch</h4>
+          <h4 data-i18n="foot.touch">Get in touch</h4>
           <p><a href="mailto:hello@buildbetter.cc">hello@buildbetter.cc</a></p>
           <p><a href="tel:+66891763372">+66 89 176 3372</a></p>
-          <p>Remote-first · Worldwide</p>
+          <p data-i18n="foot.remote">Remote-first · Worldwide</p>
           <div class="foot-logo"><img src="assets/bb-logo-full.png" alt="buildbetter — AI &amp; Software Development" /></div>
         </div>
       </div>
       <div class="foot-bottom">
         <div class="foot-legal">
-          <p>© 2026 buildbetter. All rights reserved.</p>
-          <p class="legal">Buildbetter Consulting Co., Ltd. (บริษัท บิลด์เบทเทอร์ คอนซัลติ้ง จำกัด)<br />
+          <p data-i18n="foot.rights">© 2026 buildbetter. All rights reserved.</p>
+          <p class="legal" data-i18n="foot.legal">Buildbetter Consulting Co., Ltd. (บริษัท บิลด์เบทเทอร์ คอนซัลติ้ง จำกัด)<br />
             Registered with the Department of Business Development, Ministry of Commerce, Thailand<br />
             Company registration &amp; Tax ID: 0105569148417</p>
         </div>
@@ -358,6 +370,8 @@ footer{margin-top:30px;}
     </div>
   </div>
 </footer>
+
+<script src="assets/i18n.js"></script>
 
 <!-- Tweaks panel (React island) -->
 <div id="tweaksRoot"></div>
